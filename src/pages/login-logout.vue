@@ -10,4 +10,4 @@ import { supabase, user } from '../supabase';
         Se connecter avec Github
     </button>
 </div>
-</template>    
+</template>
