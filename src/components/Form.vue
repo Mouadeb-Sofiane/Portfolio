@@ -34,7 +34,14 @@ if (route.params.id) {
             <AfficheMaison v-bind="maison" />
         </div>
         <div class="p-2">
-            <FormKit @submit="upsertMaison" type="form" v-model="maison">
+            <FormKit @submit="upsertMaison" type="form" v-model="maison"
+            :config="{
+                classes: {
+                    input: 'p-1 rounded border-gray-300 shadow-sm border',
+                    label: 'text-gray-600 italic',
+                    outer: 'py-2',
+                    },
+                }">
                 <FormKit name="nomMaison" label="nom de la maison" />
                 <FormKit name="adresse" label="adresse" />
                 <FormKit name="prix" type="number" label="prix" />
