@@ -1,8 +1,13 @@
 <script setup lang="ts">
 import AfficheMaison from '@/components/AfficheMaison.vue';
 import type { SchemaOffreMaison } from '@/types';
-
-const tableaumaisons = []
+import { supabase } from '@/supabase';
+ 
+console.log(supabase);
+    
+let {data : tableaumaisons, error} = await supabase
+    .from('Maison')
+    .select('*');
 </script>
 
 <template>
