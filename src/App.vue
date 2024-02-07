@@ -12,6 +12,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterLink to="/simple">Simple</RouterLink>
     </nav>
   </header>
-
-  <RouterView />
+  <Suspense> 
+    <RouterView />
+  </Suspense>
 </template>
