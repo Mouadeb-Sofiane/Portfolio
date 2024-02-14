@@ -13,6 +13,8 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterLink to="/maisons">Maisons</RouterLink>
       <RouterLink to="/maisons/edit">Créer des maisons</RouterLink>
       <RouterLink to="/login-logout">Connexion</RouterLink>
+      <RouterLink to="/quartier">Quartier</RouterLink>
+      <RouterLink to="/quartier/edit">Modifier un quartier</RouterLink>
     </nav>
   </header>
   <Suspense> 
