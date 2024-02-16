@@ -13,6 +13,9 @@
 <template>
   <header class="bg-gray-800 py-4">
     <div class="flex justify-between items-center px-4">
+      <div>
+        <h1 class="text-white text-lg font-semibold">Mon Site</h1>
+      </div>
       <!-- Menu mobile (visible sur les petits écrans) -->
       <div class="md:hidden">
         <!-- Utilisation d'une croix pour fermer le menu -->
@@ -24,8 +27,8 @@
           </svg>
         </button>
       </div>
-      <nav :class="{ 'hidden': !isMobileMenuOpen }" class="md:flex md:items-center md:space-x-4 ">
-        <ul class="flex flex-col md:flex-row md:space-x-4 md:space-y-0 ">
+      <nav :class="{ 'hidden': !isMobileMenuOpen }" class="md:flex md:items-center md:space-x-4">
+        <ul class="flex flex-col md:flex-row md:space-x-4 md:space-y-0">
           <li>
             <RouterLink to="/" class="text-white hover:text-gray-300">Accueil</RouterLink>
           </li>
@@ -44,22 +47,10 @@
           <li>
             <RouterLink to="/about" class="text-white hover:text-gray-300">About</RouterLink>
           </li>
-          <li>
-            <RouterLink to="/maisons/edit" class="text-white hover:text-gray-300">Créer des maisons</RouterLink>
-          </li>
-          <li>
-            <RouterLink to="/login-logout " class="text-white hover:text-gray-300">Connexion</RouterLink>
-          </li>
-          <li>
-            <RouterLink to="/maisons" class="text-white hover:text-gray-300">Card Projet</RouterLink>
-          </li>
         </ul>
       </nav>
     </div>
   </header>
-  <Suspense> 
-    <RouterView />
-  </Suspense>
 </template>
 
 

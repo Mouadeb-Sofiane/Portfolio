@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AfficheMaison from '@/components/AfficheMaison.vue';
+import AfficheCard from '@/components/AfficheCard.vue';
 import { useRoute } from 'vue-router/auto';
 
 </script>

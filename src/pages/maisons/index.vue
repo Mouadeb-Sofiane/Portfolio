@@ -1,18 +1,17 @@
 <script setup lang="ts">
-import AfficheMaison from '@/components/AfficheMaison.vue';
-import type { SchemaOffreMaison } from '@/types';
+import AfficheCard from '@/components/AfficheCard.vue';
+import type { SchemaProjet } from '@/types';
 import { supabase } from '@/supabase';
  
 console.log(supabase);
     
-let {data : tableaumaisons, error} = await supabase
-    .from('Maison')
+let {data : tableauprojet, error} = await supabase
+    .from('Card')
     .select('*');
 </script>
 
 <template>
     <div class="grid grid-cols-3 gap-4">
-        <AfficheMaison v-for="maison in tableaumaisons" v-bind="maison" />
-
+        <AfficheCard v-for="projet in tableauprojet" v-bind="projet" />
     </div>
 </template>
