@@ -1,13 +1,16 @@
 <script setup lang="ts">
-import { defineProps } from 'vue';
-import type { SchemaPageCard } from '@/types';
-defineProps<SchemaPageCard>()
+    import { defineProps } from 'vue';
+    import type { SchemaProjet } from '@/types';
+
+    defineProps<SchemaProjet>();
 </script>
 
 <template>
-    
     <div class="">
-        {{ titre }}
-        {{ description }}
+      <h1>{{ titre_page }}</h1>
+      <p>{{ description_page }}</p>
     </div>
 </template>
+  
+
+  

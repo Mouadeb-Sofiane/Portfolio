@@ -1,17 +1,9 @@
 <script setup lang="ts">
-import AfficheCard from '@/components/AfficheCard.vue';
-import { supabase } from '@/supabase';
-
-console.log(supabase);
-    
-let {data : tableauprojet, error} = await supabase
-    .from('Card')
-    .select('*');
-    
+    import AfficheSingle from '@/components/AfficheSingle.vue';
+    import {useRoute} from "vue-router/auto"
+    const route = useRoute("/projets/[[id]]")
 </script>
 
-<template>    
-    <div class="grid grid-cols-3 gap-4">
-        <AfficheCard v-for="projet in tableauprojet" v-bind="projet" />
-    </div>
+<template>
+  <AfficheSingle :id="route.params.id" />
 </template>

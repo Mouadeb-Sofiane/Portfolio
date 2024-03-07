@@ -1,52 +1,34 @@
-<script lang="ts">
-import { ref, onMounted } from 'vue'
-import { useRoute } from 'vue-router'
-import { supabase } from '@/supabase'
-import type { SchemaProjet } from '@/types'
+<script setup lang="ts">
+import { ref } from "@vue/reactivity";
+import AffichePageCard from "./AffichePageCard.vue";
+import { supabase } from "@/supabase";
+import { useRouter, useRoute } from "vue-router";
 
-export default {
-  setup() {
-    const route = useRoute()
 
-    const projectId = ref<number | null>(null)
-    const project = ref<SchemaProjet | null>(null)
+const router = useRouter();
+const projet = ref ({});
+const route = useRoute('/projets/[[id]]');
 
-    onMounted(async () => {
-      projectId.value = route.params.id
-      await fetchProjectDetails()
-    })
-
-    async function fetchProjectDetails() {
-      if (!projectId.value) return
-
-      const { data, error } = await supabase
-        .from<SchemaProjet>
-        .select('*')
-        .eq('id', projectId.value)
-        .single()
-
-      if (error) {
-        console.error('Error fetching project:', error.message)
-      } else {
-        Card.value = data
-      }
+async function upsertProjet(dataForm: any, node: { setErrors: (arg0: any[]) => void; }) {
+    const { data, error } = await supabase.from("Card").upsert(dataForm).select("id");
+    if (error) node.setErrors([error.message])
+    else {
+        console.log("data :",data);
+        router.push({name:"/projets/[[id]]", params:{id: data[0].id}});
     }
+}
 
-    
-    return {
-      Card
-    }
-  }
+if (route.params.id) {
+    const { data, error } = await supabase.from("Card").select("*").eq("id", route.params.id).single();
+    if (error) console.error(error);
+    else projet.value = data;
 }
 </script>
 
 <template>
-  <div class="max-w-3xl mx-auto mt-10" v-if="project">
-    <h1 class="text-3xl font-bold mb-5">{{ Card.nom_projet }}</h1>
-    <div class="bg-gray-100 rounded-lg p-5">
-      <img :src="Card.image_projet" alt="Project Image" class="rounded-lg mb-5" />
-      <p class="text-lg">{{ Card.description_projet }}</p>
-      <!-- Afficher d'autres détails du projet ici -->
-    </div>
+  
+  <div class="p-2">
+    <AffichePageCard v-bind="projet" :nom_projet="projet.nom_projet" :image_projet="projet.image_projet" :lien_projet="projet.lien_projet" :description_projet="projet.description_projet" :titre_page="projet.titre_page" :description_page="projet.description_page" />
   </div>
+
 </template>
