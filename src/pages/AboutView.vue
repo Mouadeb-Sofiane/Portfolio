@@ -1,9 +1,11 @@
+<template>
 <div id="world"></div>
 <div id="info">
 	Hold and drag left or right to view the opposite side.
 </div>
 
 <style>
+
 * {
 	margin: 0;
 	padding: 0;
@@ -26,3 +28,5 @@ body{
 	bottom: 2vh;
 }
 </style>
+</template>
+<script></script>
