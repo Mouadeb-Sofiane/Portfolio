@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
     import { ref, defineProps, onMounted } from 'vue';
     import { RouterLink } from 'vue-router';
     import IconLinkedin from './icon/IconLinkedin.vue';

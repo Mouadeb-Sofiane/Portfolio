@@ -2,11 +2,23 @@ const { defineSlots, defineEmits, defineExpose, defineModel, defineOptions, with
 export interface SchemaProjet {
 id?: string;
 nom_projet: string;
-prix: number;
-favori: boolean;
-image: string;
-nbrChambres: number;
-nbrSDB: number;
-adresse: string;
-surface: string;
-}
+image_projet: string;
+lien_projet: string;
+description_projet: string;
+titre_page: string;
+description_page: string;
+};
+
+export interface SchemaPageCard {
+id?: string;
+titre: string;
+description: string;
+};
+// favori: boolean;
+
+// nbrChambres: number;
+// nbrSDB: number;
+// adresse: string;
+// surface: string;
+
+

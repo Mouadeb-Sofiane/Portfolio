@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
     import { ref, defineProps, onMounted } from 'vue';
     import { RouterLink, RouterView } from 'vue-router';
 
@@ -33,20 +33,12 @@
             <RouterLink to="/" class="text-white hover:text-gray-300">Accueil</RouterLink>
           </li>
           <li>
-            <RouterLink to="/recherche" class="text-white hover:text-gray-300">Recherche</RouterLink>
+            <RouterLink to="/projets" class="text-white hover:text-gray-300">Mes Projets</RouterLink>
           </li>
           <li>
-            <RouterLink to="/spheres" class="text-white hover:text-gray-300">Sphere</RouterLink>
+            <RouterLink to="" class="text-white hover:text-gray-300">Créer des maisons</RouterLink>
           </li>
-          <li>
-            <RouterLink to="/avatar" class="text-white hover:text-gray-300">Avatar</RouterLink>
-          </li>
-          <li>
-            <RouterLink to="/desktop" class="text-white hover:text-gray-300">Desktop</RouterLink>
-          </li>
-          <li>
-            <RouterLink to="/about" class="text-white hover:text-gray-300">About</RouterLink>
-          </li>
+          
         </ul>
       </nav>
     </div>

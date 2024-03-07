@@ -1,72 +1,13 @@
-<script setup>
-    import { ref, defineProps, onMounted } from 'vue';
-    import { RouterLink, RouterView } from 'vue-router';
-
-    const isMobileMenuOpen = ref(false);
-
-    const toggleMobileMenu = () => {
-        isMobileMenuOpen.value = !isMobileMenuOpen.value;
-    };
-
+<script setup lang="ts">
+import { RouterLink, RouterView } from 'vue-router'
+import Footer from './components/Footer.vue';
+import Header from './components/Header.vue';
 </script>
 
 <template>
-  <header class="bg-gray-800 py-4">
-    <div class="flex justify-between items-center px-4">
-      <!-- Menu mobile (visible sur les petits écrans) -->
-      <div class="md:hidden">
-        <!-- Utilisation d'une croix pour fermer le menu -->
-        <button @click="toggleMobileMenu" class="text-white focus:outline-none relative">
-          <!-- Utilisation d'un bouton hamburger pour ouvrir et fermer le menu -->
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path v-if="!isMobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-            <path v-else stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-      <nav :class="{ 'hidden': !isMobileMenuOpen }" class="md:flex md:items-center md:space-x-4 ">
-        <ul class="flex flex-col md:flex-row md:space-x-4 md:space-y-0 ">
-          <li>
-            <RouterLink to="/" class="text-white hover:text-gray-300">Accueil</RouterLink>
-          </li>
-          <li>
-            <RouterLink to="/recherche" class="text-white hover:text-gray-300">Recherche</RouterLink>
-          </li>
-          <li>
-            <RouterLink to="/spheres" class="text-white hover:text-gray-300">Sphere</RouterLink>
-          </li>
-          <li>
-            <RouterLink to="/avatar" class="text-white hover:text-gray-300">Avatar</RouterLink>
-          </li>
-          <li>
-            <RouterLink to="/desktop" class="text-white hover:text-gray-300">Desktop</RouterLink>
-          </li>
-          <li>
-            <RouterLink to="/about" class="text-white hover:text-gray-300">About</RouterLink>
-          </li>
-          <li>
-            <RouterLink to="/maisons/edit" class="text-white hover:text-gray-300">Créer des maisons</RouterLink>
-          </li>
-          <li>
-            <RouterLink to="/login-logout " class="text-white hover:text-gray-300">Connexion</RouterLink>
-          </li>
-          <li>
-            <RouterLink to="/maisons" class="text-white hover:text-gray-300">Card Projet</RouterLink>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <Suspense> 
-    <RouterView />
-  </Suspense>
+  <Header />
+    <Suspense>
+      <RouterView/>
+    </Suspense>
+  <Footer />
 </template>
-
-
-<style scoped>
-@media (max-width: 768px) {
-  nav.md\:hidden {
-    display: none !important;
-  }
-}
-</style>
