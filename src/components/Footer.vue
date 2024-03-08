@@ -7,7 +7,7 @@
 </script>
 
 <template>
-    <footer class="bg-gray-900 text-gray-300">
+    <footer class="bg-primary py-4 text-secondary">
       <div class="container mx-auto p-6">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <!-- Colonne 1 -->

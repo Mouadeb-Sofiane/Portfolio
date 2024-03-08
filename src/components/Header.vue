@@ -11,7 +11,7 @@
 </script>
 
 <template>
-  <header class="bg-gray-800 py-4">
+  <header class="bg-primary py-4 text-secondary">
     <div class="flex justify-between items-center px-4">
       <div>
         <h1 class="text-white text-lg font-semibold">Mon Site</h1>

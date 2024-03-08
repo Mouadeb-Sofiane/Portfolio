@@ -7,8 +7,8 @@
 
 <template>
     <div class="">
-      <h1>{{ titre_page }}</h1>
-      <p>{{ description_page }}</p>
+      <h1>{{ nom_projet }}</h1>
+      <p>{{ description_projet }}</p>
     </div>
 </template>
   
