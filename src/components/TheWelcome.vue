@@ -2,6 +2,7 @@
   import { ref } from 'vue';
   import IconSun from './icon/IconSun.vue';
   import IconMoon from './icon/IconMoon.vue';
+  import AfficheCard from './AfficheCard.vue';
 
   const isDarkMode = ref(false);
 
@@ -37,16 +38,19 @@
       <p :class="{ 'text-secondary': isDarkMode, 'text-primary': !isDarkMode }">Developpeur Full Stack</p> 
     </div>
     <div id="text-container">
-            <div class="balise-img">
+            <div class="balise-img"><
                 <p class="col-blue">img</p>
                 <p class="col-blue-w">src=</p>
                 <p class="col-orange">"SofianeMOUADEB.png"</p>
                 <p class="col-blue-w">alt=</p>
-                <p class="col-orange">"Ma photo de profil"</p>
+                <p class="col-orange">"Ma photo de profil"</p>>
             </div>
         </div>
         <div id="image-container">
             <img src="https://www.w3schools.com/w3images/avatar2.png" alt="Votre image">
+        </div>
+        <div>
+          
         </div>
   </div>
 </template>
