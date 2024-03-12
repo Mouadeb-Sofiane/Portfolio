@@ -30,9 +30,11 @@ let {data: tableauprojet, error} = await supabase
         </button>
 
     <div :class="{ 'dark': isDarkMode, 'bg-secondary': !isDarkMode, 'bg-primary': isDarkMode }" class="min-h-screen">
-      <div class="grid grid-cols-3 gap-4">
-        <AfficheCard v-for="projet in tableauprojet" v-bind="projet" />
-      </div>
+        <h1 :class="{ 'text-secondary': isDarkMode, 'text-primary': !isDarkMode }">Mes projets</h1>
+        <p :class="{ 'text-secondary': isDarkMode, 'text-primary': !isDarkMode }">Voici une liste de mes projets</p>
+            <div class="grid grid-cols-3 gap-4">
+                <AfficheCard v-for="projet in tableauprojet" v-bind="projet" />
+             </div>
     </div>
     </div>
 </template>

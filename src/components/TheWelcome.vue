@@ -49,8 +49,62 @@
         <div id="image-container">
             <img src="https://www.w3schools.com/w3images/avatar2.png" alt="Votre image">
         </div>
+        <div :class="{ 'text-secondary': isDarkMode, 'text-primary': !isDarkMode }">
+          <p>Je suis actuellement étudiant au BUT MMI de Montbéliard.</p>
+          <p>Je souhaite devenir un développeur web full stack polivalent.</p>
+          <p>Je suis polivalent autant pour le front-end que le back-end.</p>
+        </div>
         <div>
-          
+          <h2 :class="{ 'text-secondary': isDarkMode }">Qui suis-je ?</h2>
+          <div>
+            3 cards sur moi 
+          </div>
+        </div>
+        <div>
+          <h2 :class="{ 'text-secondary': isDarkMode }">Mes compétences</h2>
+          <div>
+            <div>
+              <h3 :class="{ 'text-secondary': isDarkMode }">Developpement web</h3>
+              Icone de developpement web (HTML, CSS, JS, TS, PHP, SQL, Vue js, Wordpress .)
+            </div>
+            <div>
+              <h3 :class="{ 'text-secondary': isDarkMode }">Design</h3>
+              Icone de design ( Figma, Photoshop, Illustrator .)
+            </div>
+            <div>
+              <h3 :class="{ 'text-secondary': isDarkMode }">Communication</h3>
+              Icone de communication ( SEO, Drive, Google Analytics, Trello, Canva .)
+            </div>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold mb-4">Mes Compétences</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div class="bg-gray-100 rounded-lg p-6 shadow-md">
+                  <div class="flex items-center mb-2">
+                      <img src="../assets/img/9414296.png" alt="Icone de Développement Web" class="w-8 h-8 mr-3">
+                      <p class="text-lg">Développement Web</p>
+                  </div>
+                  <p class="text-gray-600">Maîtrise des langages HTML, CSS, JS, TS, PHP, SQL, Vue.js, ainsi que Wordpress.</p>
+              </div>
+
+              <div class="bg-gray-100 rounded-lg p-6 shadow-md">
+                  <div class="flex items-center mb-2">
+                      <img src="../assets/img/9414296.png" alt="Icone de Design" class="w-8 h-8 mr-3">
+                      <p class="text-lg">Design</p>
+                  </div>
+                  <p class="text-gray-600">Expertise dans l'utilisation de Figma, Photoshop et Illustrator pour créer des designs impressionnants et intuitifs.</p>
+              </div>
+
+              <div class="bg-gray-100 rounded-lg p-6 shadow-md">
+                  <div class="flex items-center mb-2">
+                      <img src="#" alt="Icone de Communication" class="w-8 h-8 mr-3">
+                      <p class="text-lg">Communication</p>
+                  </div>
+                  <p class="text-gray-600">Familiarité avec les outils de référencement SEO, Google Drive, Google Analytics, Trello et Canva pour optimiser la communication et la collaboration.</p>
+              </div>
+          </div>
+
+          </div>
         </div>
   </div>
 </template>
