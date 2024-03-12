@@ -15,6 +15,18 @@
   };
   import { onMounted } from 'vue';
   import IconVuejs from './icon/IconVuejs.vue';
+import IconHtml from './icon/IconHtml.vue';
+import IconCss from './icon/IconCss.vue';
+import IconTailwindcss from './icon/IconTailwindcss.vue';
+import IconWordpress from './icon/IconWordpress.vue';
+import IconPhp from './icon/IconPhp.vue';
+import IconDrive from './icon/IconDrive.vue';
+import IconFigma from './icon/IconFigma.vue';
+import IconIllustrator from './icon/IconIllustrator.vue';
+import IconPhotoshop from './icon/IconPhotoshop.vue';
+import IconTrello from './icon/IconTrello.vue';
+import IconCanva from './icon/IconCanva.vue';
+import IconDaVinci from './icon/IconDaVinci.vue';
 
   onMounted(() => {
     const textContainer = document.getElementById('text-container');
@@ -81,35 +93,104 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               <div class="rounded-lg p-6 shadow-md" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-fourth': isDarkMode }">
                   <div class="flex items-center mb-2">
-                      <img src="../assets/img/9414296.png" alt="Icone de Développement Web" class="w-8 h-8 mr-3">
                       <p class="text-lg">Développement Web</p>
                   </div>
-                  <p class="text-gray-600">Maîtrise des langages HTML, CSS, JS, TS, PHP, SQL, Vue.js, ainsi que Wordpress.</p>
+                  <div class="flex">
+                    <IconHtml class="h-6 w-6 mr-3"/>
+                      <!-- Barre de progression -->
+                      <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
+                        <div class="h-full bg-html absolute animate-progress1"></div>
+                      </div>  
+                      <IconCss class="h-8 w-8 mr-3 ml-5"/>
+                      <!-- Barre de progression -->
+                      <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
+                        <div class="h-full bg-css absolute animate-progress1"></div>
+                      </div>                 
+                  </div>
+                  <div class="flex">
+                    <IconWordpress class="h-6 w-6 mr-3"/>
+                      <!-- Barre de progression -->
+                      <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
+                        <div class="h-full bg-wp absolute animate-progress1"></div>
+                      </div>  
+                      <IconPhp class="h-8 w-8 mr-3 ml-5"/>
+                      <!-- Barre de progression -->
+                      <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
+                        <div class="h-full bg-php absolute animate-progress1"></div>
+                      </div>                 
+                  </div>
+                  <div class="flex">
+                    <IconVuejs class="h-6 w-6 mr-3"/>
+                      <!-- Barre de progression -->
+                      <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
+                        <div class="h-full bg-progress absolute animate-progress1"></div>
+                      </div>  
+                      <IconTailwindcss class="h-8 w-8 mr-3 ml-5"/>
+                      <!-- Barre de progression -->
+                      <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
+                        <div class="h-full bg-tailwindcss absolute animate-progress1"></div>
+                      </div>                 
+                  </div>
               </div>
 
               <div class="rounded-lg p-6 shadow-md" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-fourth': isDarkMode }">
                   <div class="flex items-center mb-2">
-                      <img src="../assets/img/1804352.png" alt="Icone de Design" class="w-8 h-8 mr-3">
                       <p class="text-lg">Design</p>
                   </div>
-                  <p class="text-gray-600">Expertise dans l'utilisation de Figma, Photoshop et Illustrator pour créer des designs impressionnants et intuitifs.</p>
+                  <div class="flex">
+                    <IconFigma class="h-8 w-8 mr-3 ml-5"/>
+                      <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
+                        <div class="h-full bg-figma absolute animate-progress1"></div>
+                      </div>  
+                  </div>
+                  <div class="flex"> 
+                    <IconPhotoshop class="h-8 w-8 mr-3 ml-5"/>
+                      <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
+                        <div class="h-full bg-photoshop absolute animate-progress1"></div>
+                      </div> 
+                  </div>
+                  <div class="flex">
+                    <IconIllustrator class="h-8 w-8 mr-3 ml-5"/>
+                      <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
+                        <div class="h-full bg-illustrator absolute animate-progress1"></div>
+                      </div> 
+                  </div>
               </div>
 
               <div class="rounded-lg p-6 shadow-md relative" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-fourth': isDarkMode }">
                 <div class="flex items-center mb-2">
-                    <img src="../assets/img/1155461.png" alt="Icone de Communication" class="w-8 h-8 mr-3">
                     <p class="text-lg">Communication</p>
                 </div>
-                <IconVuejs class="h-6 w-6 mr-3"/>
-
-                <!-- Barre de progression -->
-                <div class="h-3 w-32 bg-white rounded-full overflow-hidden mt-2 relative">
-                    <div class="h-full bg-progress absolute animate-progress"></div>
-                </div>
-
-                <p class="text-gray-600 mt-2">Familiarité avec les outils de référencement SEO, Google Drive, Google Analytics, Trello et Canva pour optimiser la communication et la collaboration.</p>
+                  <div class="flex">
+                    <IconDrive class="h-8 w-8 mr-3 ml-5" />
+                      <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
+                        <div class="h-full bg-progress absolute animate-progress1"></div>
+                      </div>            
+                  </div>
+                  <div class="flex">
+                    <IconTrello class="h-8 w-8 mr-3 ml-5"/>
+                      <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
+                        <div class="h-full bg-trello absolute animate-progress1"></div>
+                      </div>  
+                  </div>
+                  <div class="flex">
+                    <IconCanva class="h-8 w-8 mr-3 ml-5"/>
+                      <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
+                        <div class="h-full bg-tailwindcss absolute animate-progress1"></div>
+                      </div>   
+                  </div> 
             </div>
-
+            <div class="rounded-lg p-6 shadow-md relative mb-10" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-fourth': isDarkMode }">
+                <div class="flex items-center mb-2">
+                    <p class="text-lg">Audiovisuel</p>
+                </div>
+                  <div class="flex">
+                    <IconDaVinci class="h-8 w-8 mr-3 ml-5" />
+                      <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
+                        <div class="h-full bg-progress absolute animate-progress1"></div>
+                      </div>            
+                  </div>
+            </div>
           </div>
           </div>
         </div>
@@ -128,7 +209,22 @@
     }
 }
 
+@keyframes progress1 {
+    0% {
+        width: 0%;
+        border-radius: 0;
+    }
+    100% {
+        width: 85%;
+        border-radius: 9999px;
+    }
+}
+
 .animate-progress {
+    animation: progress 3s ease forwards;
+}
+
+.animate-progress1 {
     animation: progress 3s ease forwards;
 }
 
