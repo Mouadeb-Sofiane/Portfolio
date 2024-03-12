@@ -2,7 +2,6 @@
   import { ref } from 'vue';
   import IconSun from './icon/IconSun.vue';
   import IconMoon from './icon/IconMoon.vue';
-  import AfficheCard from './AfficheCard.vue';
 
   const isDarkMode = ref(false);
 
@@ -15,6 +14,7 @@
     }
   };
   import { onMounted } from 'vue';
+  import IconVuejs from './icon/IconVuejs.vue';
 
   onMounted(() => {
     const textContainer = document.getElementById('text-container');
@@ -30,8 +30,8 @@
   <div :class="{ 'dark': isDarkMode, 'bg-secondary': !isDarkMode, 'bg-primary': isDarkMode }" class="min-h-screen">
     <!-- Utilisation d'icônes pour le mode sombre/clair -->
     <button @click="toggleDarkMode" class="fixed top-20 right-4 p-2 bg-accent border border-gray-900 rounded-full bg-white-300 dark:bg-gray-700 dark:text-gray-300">
-      <IconSun v-if="isDarkMode" class="h-6 w-6 bg-white" />
-      <IconMoon v-else class="h-6 w-6 bg-white" />
+      <IconSun v-if="isDarkMode" class="h-6 w-6" />
+      <IconMoon v-else class="h-6 w-6" />
     </button>
     <div>
       <h1 :class="{ 'text-secondary': isDarkMode }">Sofiane Mouadeb</h1> 
@@ -76,10 +76,10 @@
               Icone de communication ( SEO, Drive, Google Analytics, Trello, Canva .)
             </div>
           </div>
-          <div>
+          <div :class="{ 'text-secondary': isDarkMode }">
             <h2 class="text-xl font-bold mb-4">Mes Compétences</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              <div class="bg-gray-100 rounded-lg p-6 shadow-md">
+              <div class="rounded-lg p-6 shadow-md" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-fourth': isDarkMode }">
                   <div class="flex items-center mb-2">
                       <img src="../assets/img/9414296.png" alt="Icone de Développement Web" class="w-8 h-8 mr-3">
                       <p class="text-lg">Développement Web</p>
@@ -87,29 +87,55 @@
                   <p class="text-gray-600">Maîtrise des langages HTML, CSS, JS, TS, PHP, SQL, Vue.js, ainsi que Wordpress.</p>
               </div>
 
-              <div class="bg-gray-100 rounded-lg p-6 shadow-md">
+              <div class="rounded-lg p-6 shadow-md" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-fourth': isDarkMode }">
                   <div class="flex items-center mb-2">
-                      <img src="../assets/img/9414296.png" alt="Icone de Design" class="w-8 h-8 mr-3">
+                      <img src="../assets/img/1804352.png" alt="Icone de Design" class="w-8 h-8 mr-3">
                       <p class="text-lg">Design</p>
                   </div>
                   <p class="text-gray-600">Expertise dans l'utilisation de Figma, Photoshop et Illustrator pour créer des designs impressionnants et intuitifs.</p>
               </div>
 
-              <div class="bg-gray-100 rounded-lg p-6 shadow-md">
-                  <div class="flex items-center mb-2">
-                      <img src="#" alt="Icone de Communication" class="w-8 h-8 mr-3">
-                      <p class="text-lg">Communication</p>
-                  </div>
-                  <p class="text-gray-600">Familiarité avec les outils de référencement SEO, Google Drive, Google Analytics, Trello et Canva pour optimiser la communication et la collaboration.</p>
-              </div>
-          </div>
+              <div class="rounded-lg p-6 shadow-md relative" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-fourth': isDarkMode }">
+                <div class="flex items-center mb-2">
+                    <img src="../assets/img/1155461.png" alt="Icone de Communication" class="w-8 h-8 mr-3">
+                    <p class="text-lg">Communication</p>
+                </div>
+                <IconVuejs class="h-6 w-6 mr-3"/>
 
+                <!-- Barre de progression -->
+                <div class="h-3 w-32 bg-white rounded-full overflow-hidden mt-2 relative">
+                    <div class="h-full bg-progress absolute animate-progress"></div>
+                </div>
+
+                <p class="text-gray-600 mt-2">Familiarité avec les outils de référencement SEO, Google Drive, Google Analytics, Trello et Canva pour optimiser la communication et la collaboration.</p>
+            </div>
+
+          </div>
           </div>
         </div>
   </div>
 </template>
 
 <style>
+@keyframes progress {
+    0% {
+        width: 0%;
+        border-radius: 0;
+    }
+    100% {
+        width: 98%;
+        border-radius: 9999px;
+    }
+}
+
+.animate-progress {
+    animation: progress 3s ease forwards;
+}
+
+
+
+
+
 @keyframes typing {
       from {
         width: 0;
