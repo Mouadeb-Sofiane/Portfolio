@@ -25,8 +25,8 @@ let {data: tableauprojet, error} = await supabase
 <template>
     <div class="relative">
         <button @click="toggleDarkMode" class="fixed top-20 right-4 p-2 rounded-full bg-accent border border-gray-900 dark:bg-gray-700 dark:text-gray-300 z-10">
-            <IconSun v-if="isDarkMode" class="h-6 w-6 bg-white" />
-            <IconMoon v-else class="h-6 w-6 bg-white" />
+            <IconSun v-if="isDarkMode" class="h-6 w-6" />
+            <IconMoon v-else class="h-6 w-6" />
         </button>
 
     <div :class="{ 'dark': isDarkMode, 'bg-secondary': !isDarkMode, 'bg-primary': isDarkMode }" class="min-h-screen">
