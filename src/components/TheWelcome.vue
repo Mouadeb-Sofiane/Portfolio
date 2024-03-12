@@ -89,7 +89,7 @@
 
               <div class="bg-gray-100 rounded-lg p-6 shadow-md">
                   <div class="flex items-center mb-2">
-                      <img src="../assets/img/9414296.png" alt="Icone de Design" class="w-8 h-8 mr-3">
+                      <img src="../assets/img/1804352.png" alt="Icone de Design" class="w-8 h-8 mr-3">
                       <p class="text-lg">Design</p>
                   </div>
                   <p class="text-gray-600">Expertise dans l'utilisation de Figma, Photoshop et Illustrator pour créer des designs impressionnants et intuitifs.</p>
@@ -97,7 +97,7 @@
 
               <div class="bg-gray-100 rounded-lg p-6 shadow-md">
                   <div class="flex items-center mb-2">
-                      <img src="#" alt="Icone de Communication" class="w-8 h-8 mr-3">
+                      <img src="../assets/img/1155461.png" alt="Icone de Communication" class="w-8 h-8 mr-3">
                       <p class="text-lg">Communication</p>
                   </div>
                   <p class="text-gray-600">Familiarité avec les outils de référencement SEO, Google Drive, Google Analytics, Trello et Canva pour optimiser la communication et la collaboration.</p>
