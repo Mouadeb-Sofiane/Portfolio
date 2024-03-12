@@ -2,6 +2,20 @@
   import { ref } from 'vue';
   import IconSun from './icon/IconSun.vue';
   import IconMoon from './icon/IconMoon.vue';
+  import { onMounted } from 'vue';
+  import IconVuejs from './icon/IconVuejs.vue';
+  import IconHtml from './icon/IconHtml.vue';
+  import IconCss from './icon/IconCss.vue';
+  import IconTailwindcss from './icon/IconTailwindcss.vue';
+  import IconWordpress from './icon/IconWordpress.vue';
+  import IconPhp from './icon/IconPhp.vue';
+  import IconDrive from './icon/IconDrive.vue';
+  import IconFigma from './icon/IconFigma.vue';
+  import IconIllustrator from './icon/IconIllustrator.vue';
+  import IconPhotoshop from './icon/IconPhotoshop.vue';
+  import IconTrello from './icon/IconTrello.vue';
+  import IconCanva from './icon/IconCanva.vue';
+  import IconDaVinci from './icon/IconDaVinci.vue';
 
   const isDarkMode = ref(false);
 
@@ -13,20 +27,6 @@
       document.documentElement.classList.remove('dark');
     }
   };
-  import { onMounted } from 'vue';
-  import IconVuejs from './icon/IconVuejs.vue';
-import IconHtml from './icon/IconHtml.vue';
-import IconCss from './icon/IconCss.vue';
-import IconTailwindcss from './icon/IconTailwindcss.vue';
-import IconWordpress from './icon/IconWordpress.vue';
-import IconPhp from './icon/IconPhp.vue';
-import IconDrive from './icon/IconDrive.vue';
-import IconFigma from './icon/IconFigma.vue';
-import IconIllustrator from './icon/IconIllustrator.vue';
-import IconPhotoshop from './icon/IconPhotoshop.vue';
-import IconTrello from './icon/IconTrello.vue';
-import IconCanva from './icon/IconCanva.vue';
-import IconDaVinci from './icon/IconDaVinci.vue';
 
   onMounted(() => {
     const textContainer = document.getElementById('text-container');
@@ -99,36 +99,36 @@ import IconDaVinci from './icon/IconDaVinci.vue';
                     <IconHtml class="h-6 w-6 mr-3"/>
                       <!-- Barre de progression -->
                       <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
-                        <div class="h-full bg-html absolute animate-progress1"></div>
+                        <div class="h-full bg-html absolute animate-progress"></div>
                       </div>  
                       <IconCss class="h-8 w-8 mr-3 ml-5"/>
                       <!-- Barre de progression -->
                       <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
-                        <div class="h-full bg-css absolute animate-progress1"></div>
+                        <div class="h-full bg-css absolute animate-progress"></div>
                       </div>                 
                   </div>
                   <div class="flex">
                     <IconWordpress class="h-6 w-6 mr-3"/>
                       <!-- Barre de progression -->
                       <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
-                        <div class="h-full bg-wp absolute animate-progress1"></div>
+                        <div class="h-full bg-wp absolute animate-progress"></div>
                       </div>  
                       <IconPhp class="h-8 w-8 mr-3 ml-5"/>
                       <!-- Barre de progression -->
                       <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
-                        <div class="h-full bg-php absolute animate-progress1"></div>
+                        <div class="h-full bg-php absolute animate-progress"></div>
                       </div>                 
                   </div>
                   <div class="flex">
                     <IconVuejs class="h-6 w-6 mr-3"/>
                       <!-- Barre de progression -->
                       <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
-                        <div class="h-full bg-progress absolute animate-progress1"></div>
+                        <div class="h-full bg-progress absolute animate-progress"></div>
                       </div>  
                       <IconTailwindcss class="h-8 w-8 mr-3 ml-5"/>
                       <!-- Barre de progression -->
                       <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
-                        <div class="h-full bg-tailwindcss absolute animate-progress1"></div>
+                        <div class="h-full bg-tailwindcss absolute animate-progress"></div>
                       </div>                 
                   </div>
               </div>
@@ -140,19 +140,19 @@ import IconDaVinci from './icon/IconDaVinci.vue';
                   <div class="flex">
                     <IconFigma class="h-8 w-8 mr-3 ml-5"/>
                       <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
-                        <div class="h-full bg-figma absolute animate-progress1"></div>
+                        <div class="h-full bg-figma absolute animate-progress"></div>
                       </div>  
                   </div>
                   <div class="flex"> 
                     <IconPhotoshop class="h-8 w-8 mr-3 ml-5"/>
                       <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
-                        <div class="h-full bg-photoshop absolute animate-progress1"></div>
+                        <div class="h-full bg-photoshop absolute animate-progress"></div>
                       </div> 
                   </div>
                   <div class="flex">
                     <IconIllustrator class="h-8 w-8 mr-3 ml-5"/>
                       <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
-                        <div class="h-full bg-illustrator absolute animate-progress1"></div>
+                        <div class="h-full bg-illustrator absolute animate-progress"></div>
                       </div> 
                   </div>
               </div>
@@ -164,19 +164,19 @@ import IconDaVinci from './icon/IconDaVinci.vue';
                   <div class="flex">
                     <IconDrive class="h-8 w-8 mr-3 ml-5" />
                       <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
-                        <div class="h-full bg-progress absolute animate-progress1"></div>
+                        <div class="h-full bg-progress absolute animate-progress"></div>
                       </div>            
                   </div>
                   <div class="flex">
                     <IconTrello class="h-8 w-8 mr-3 ml-5"/>
                       <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
-                        <div class="h-full bg-trello absolute animate-progress1"></div>
+                        <div class="h-full bg-trello absolute animate-progress"></div>
                       </div>  
                   </div>
                   <div class="flex">
                     <IconCanva class="h-8 w-8 mr-3 ml-5"/>
                       <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
-                        <div class="h-full bg-tailwindcss absolute animate-progress1"></div>
+                        <div class="h-full bg-tailwindcss absolute animate-progress"></div>
                       </div>   
                   </div> 
             </div>
@@ -187,7 +187,7 @@ import IconDaVinci from './icon/IconDaVinci.vue';
                   <div class="flex">
                     <IconDaVinci class="h-8 w-8 mr-3 ml-5" />
                       <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
-                        <div class="h-full bg-progress absolute animate-progress1"></div>
+                        <div class="h-full bg-progress absolute animate-davinci"></div>
                       </div>            
                   </div>
             </div>
@@ -209,16 +209,21 @@ import IconDaVinci from './icon/IconDaVinci.vue';
     }
 }
 
-@keyframes progress1 {
+@keyframes davinci {
     0% {
         width: 0%;
         border-radius: 0;
     }
     100% {
-        width: 85%;
-        border-radius: 9999px;
+        width: 55%;
+        border-radius: 9999px; /* Utilisez une valeur suffisamment grande pour obtenir un coin très arrondi */
     }
 }
+
+.animate-davinci {
+    animation: davinci 3s ease forwards; /* Réglez la durée et le timing de l'animation selon vos préférences */
+}
+
 
 .animate-progress {
     animation: progress 3s ease forwards;
