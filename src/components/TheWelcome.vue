@@ -41,7 +41,7 @@
 <template>
   <div :class="{ 'dark': isDarkMode, 'bg-secondary': !isDarkMode, 'bg-primary': isDarkMode }" class="min-h-screen">
     <!-- Utilisation d'icônes pour le mode sombre/clair -->
-    <button @click="toggleDarkMode" class="fixed top-20 right-4 p-2 bg-accent border border-gray-900 rounded-full bg-white-300 dark:bg-gray-700 dark:text-gray-300">
+    <button @click="toggleDarkMode" class="fixed top-20 right-4 p-2 bg-accent border border-gray-900 rounded-full  dark:text-gray-300">
       <IconSun v-if="isDarkMode" class="h-6 w-6" />
       <IconMoon v-else class="h-6 w-6" />
     </button>

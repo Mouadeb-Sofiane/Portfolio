@@ -3,7 +3,7 @@ import { ref } from 'vue';
 import { supabase } from '@/supabase';
 import AfficheCard from '@/components/AfficheCard.vue';
 import IconSun from '@/components/icon/IconSun.vue';
-  import IconMoon from '@/components/icon/IconMoon.vue';
+import IconMoon from '@/components/icon/IconMoon.vue';
 
 const isDarkMode = ref(false);
 
@@ -24,7 +24,7 @@ let {data: tableauprojet, error} = await supabase
 
 <template>
     <div class="relative">
-        <button @click="toggleDarkMode" class="fixed top-20 right-4 p-2 rounded-full bg-accent border border-gray-900 dark:bg-gray-700 dark:text-gray-300 z-10">
+        <button @click="toggleDarkMode" class="fixed top-20 right-4 p-2 bg-accent border border-gray-900 rounded-full  dark:text-gray-300 z-10">
             <IconSun v-if="isDarkMode" class="h-6 w-6" />
             <IconMoon v-else class="h-6 w-6" />
         </button>
