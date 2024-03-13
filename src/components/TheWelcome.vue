@@ -90,7 +90,7 @@
           </div>
           <div :class="{ 'text-secondary': isDarkMode }">
             <h2 class="text-xl font-bold mb-4">Mes Compétences</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10 mr-8 ml-8">
               <div class="rounded-lg p-6 shadow-md" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-fourth': isDarkMode }">
                   <div class="flex items-center mb-2">
                       <p class="text-lg">Développement Web</p>
@@ -180,21 +180,23 @@
                       </div>   
                   </div> 
             </div>
-            <div class="rounded-lg p-6 shadow-md relative mb-10" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-fourth': isDarkMode }">
-                <div class="flex items-center mb-2">
-                    <p class="text-lg">Audiovisuel</p>
-                </div>
-                  <div class="flex">
-                    <IconDaVinci class="h-8 w-8 mr-3 ml-5" />
-                      <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
-                        <div class="h-full bg-progress absolute animate-davinci"></div>
-                      </div>            
-                  </div>
-            </div>
+          </div>
+          <div class="rounded-lg p-6 shadow-md relative mb-8 mr-8 ml-8" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-fourth': isDarkMode }">
+              <div class="flex items-center">
+                <p class="text-lg">Audiovisuel</p>
+              </div>
+              <div class="flex">
+                <IconDaVinci class="h-8 w-8 mr-3 ml-5" />
+                <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
+                  <div class="h-full bg-progress absolute animate-davinci"></div>
+                </div>            
+              </div>
+          </div>
+          
+          <p>gthyujikol</p>
           </div>
           </div>
         </div>
-  </div>
 </template>
 
 <style>
