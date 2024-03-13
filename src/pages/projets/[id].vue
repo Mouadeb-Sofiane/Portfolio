@@ -1,7 +1,7 @@
 <script setup lang="ts">
     import AfficheSingle from '@/components/AfficheSingle.vue';
     import {useRoute} from "vue-router/auto"
-    const route = useRoute("/projets/[[id]]")
+    const route = useRoute("/projets/[id]")
 </script>
 
 <template>

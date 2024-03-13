@@ -15,7 +15,7 @@
   });
 
   const router = useRouter();
-  const route = useRoute('/projets/[[id]]');
+  const route = useRoute('/projets/[id]');
 
   if (route.params.id) {
       const { data, error } = await supabase.from("Card").select("*").eq("id", route.params.id).single();

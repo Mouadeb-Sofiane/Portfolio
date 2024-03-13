@@ -9,155 +9,51 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      Agent: {
+      Card: {
         Row: {
+          description_projet: string | null
           id: number
-          id_users: string | null
-          nom_agent: string | null
+          image_projet: string | null
+          lien_projet: string | null
+          nom_projet: string | null
         }
         Insert: {
+          description_projet?: string | null
           id?: number
-          id_users?: string | null
-          nom_agent?: string | null
+          image_projet?: string | null
+          lien_projet?: string | null
+          nom_projet?: string | null
         }
         Update: {
+          description_projet?: string | null
           id?: number
-          id_users?: string | null
-          nom_agent?: string | null
-        }
-        Relationships: [
-          {
-            foreignKeyName: "public_Agent_id_users_fkey"
-            columns: ["id_users"]
-            isOneToOne: false
-            referencedRelation: "users"
-            referencedColumns: ["id"]
-          }
-        ]
-      }
-      Commune: {
-        Row: {
-          id: number
-          nom_commune: string | null
-        }
-        Insert: {
-          id?: number
-          nom_commune?: string | null
-        }
-        Update: {
-          id?: number
-          nom_commune?: string | null
+          image_projet?: string | null
+          lien_projet?: string | null
+          nom_projet?: string | null
         }
         Relationships: []
       }
-      Maison: {
+      PageCard: {
         Row: {
-          adresse: string | null
-          agent: number | null
-          favori: boolean | null
+          description: string | null
           id: number
-          image: string | null
-          nbrChambres: number | null
-          nbrSDB: number | null
-          nomMaison: string
-          prix: number | null
-          rue: number | null
-          surface: string | null
+          titre: string | null
         }
         Insert: {
-          adresse?: string | null
-          agent?: number | null
-          favori?: boolean | null
+          description?: string | null
           id?: number
-          image?: string | null
-          nbrChambres?: number | null
-          nbrSDB?: number | null
-          nomMaison?: string
-          prix?: number | null
-          rue?: number | null
-          surface?: string | null
+          titre?: string | null
         }
         Update: {
-          adresse?: string | null
-          agent?: number | null
-          favori?: boolean | null
+          description?: string | null
           id?: number
-          image?: string | null
-          nbrChambres?: number | null
-          nbrSDB?: number | null
-          nomMaison?: string
-          prix?: number | null
-          rue?: number | null
-          surface?: string | null
+          titre?: string | null
         }
-        Relationships: [
-          {
-            foreignKeyName: "Maison_agent_fkey"
-            columns: ["agent"]
-            isOneToOne: false
-            referencedRelation: "Agent"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "Maison_rue_fkey"
-            columns: ["rue"]
-            isOneToOne: false
-            referencedRelation: "Quartier"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "Maison_rue_fkey"
-            columns: ["rue"]
-            isOneToOne: false
-            referencedRelation: "QuartierCommune"
-            referencedColumns: ["id_Quartier"]
-          }
-        ]
-      }
-      Quartier: {
-        Row: {
-          id: number
-          nom_quartier: string | null
-          quartier_commune: number | null
-        }
-        Insert: {
-          id?: number
-          nom_quartier?: string | null
-          quartier_commune?: number | null
-        }
-        Update: {
-          id?: number
-          nom_quartier?: string | null
-          quartier_commune?: number | null
-        }
-        Relationships: [
-          {
-            foreignKeyName: "Quartier_quartier_commune_fkey"
-            columns: ["quartier_commune"]
-            isOneToOne: false
-            referencedRelation: "Commune"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "Quartier_quartier_commune_fkey"
-            columns: ["quartier_commune"]
-            isOneToOne: false
-            referencedRelation: "QuartierCommune"
-            referencedColumns: ["id_Commune"]
-          }
-        ]
+        Relationships: []
       }
     }
     Views: {
-      QuartierCommune: {
-        Row: {
-          id_Commune: number | null
-          id_Quartier: number | null
-          nom_commune: string | null
-          nom_quartier: string | null
-        }
-        Relationships: []
-      }
+      [_ in never]: never
     }
     Functions: {
       [_ in never]: never

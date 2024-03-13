@@ -104,31 +104,31 @@
                       <IconCss class="h-8 w-8 mr-3 ml-5"/>
                       <!-- Barre de progression -->
                       <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
-                        <div class="h-full bg-css absolute animate-progress"></div>
+                        <div class="h-full bg-css absolute animate-neuf"></div>
                       </div>                 
                   </div>
                   <div class="flex">
                     <IconWordpress class="h-6 w-6 mr-3"/>
                       <!-- Barre de progression -->
                       <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
-                        <div class="h-full bg-wp absolute animate-progress"></div>
+                        <div class="h-full bg-wp absolute animate-septcinq"></div>
                       </div>  
                       <IconPhp class="h-8 w-8 mr-3 ml-5"/>
                       <!-- Barre de progression -->
                       <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
-                        <div class="h-full bg-php absolute animate-progress"></div>
+                        <div class="h-full bg-php absolute animate-six"></div>
                       </div>                 
                   </div>
                   <div class="flex">
                     <IconVuejs class="h-6 w-6 mr-3"/>
                       <!-- Barre de progression -->
                       <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
-                        <div class="h-full bg-progress absolute animate-progress"></div>
+                        <div class="h-full bg-progress absolute animate-neuf"></div>
                       </div>  
                       <IconTailwindcss class="h-8 w-8 mr-3 ml-5"/>
                       <!-- Barre de progression -->
                       <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
-                        <div class="h-full bg-tailwindcss absolute animate-progress"></div>
+                        <div class="h-full bg-tailwindcss absolute animate-septcinq"></div>
                       </div>                 
                   </div>
               </div>
@@ -146,13 +146,13 @@
                   <div class="flex"> 
                     <IconPhotoshop class="h-8 w-8 mr-3 ml-5"/>
                       <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
-                        <div class="h-full bg-photoshop absolute animate-progress"></div>
+                        <div class="h-full bg-photoshop absolute animate-six"></div>
                       </div> 
                   </div>
                   <div class="flex">
                     <IconIllustrator class="h-8 w-8 mr-3 ml-5"/>
                       <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
-                        <div class="h-full bg-illustrator absolute animate-progress"></div>
+                        <div class="h-full bg-illustrator absolute animate-septcinq"></div>
                       </div> 
                   </div>
               </div>
@@ -164,19 +164,19 @@
                   <div class="flex">
                     <IconDrive class="h-8 w-8 mr-3 ml-5" />
                       <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
-                        <div class="h-full bg-progress absolute animate-progress"></div>
+                        <div class="h-full bg-progress absolute animate-neuf"></div>
                       </div>            
                   </div>
                   <div class="flex">
                     <IconTrello class="h-8 w-8 mr-3 ml-5"/>
                       <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
-                        <div class="h-full bg-trello absolute animate-progress"></div>
+                        <div class="h-full bg-trello absolute animate-septcinq"></div>
                       </div>  
                   </div>
                   <div class="flex">
                     <IconCanva class="h-8 w-8 mr-3 ml-5"/>
                       <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
-                        <div class="h-full bg-tailwindcss absolute animate-progress"></div>
+                        <div class="h-full bg-tailwindcss absolute animate-septcinq"></div>
                       </div>   
                   </div> 
             </div>
@@ -218,6 +218,50 @@
         width: 55%;
         border-radius: 9999px; /* Utilisez une valeur suffisamment grande pour obtenir un coin très arrondi */
     }
+}
+
+@keyframes septcinq {
+    0% {
+        width: 0%;
+        border-radius: 0;
+    }
+    100% {
+        width: 75%;
+        border-radius: 9999px; /* Utilisez une valeur suffisamment grande pour obtenir un coin très arrondi */
+    }
+}
+
+@keyframes six {
+    0% {
+        width: 0%;
+        border-radius: 0;
+    }
+    100% {
+        width: 65%;
+        border-radius: 9999px; /* Utilisez une valeur suffisamment grande pour obtenir un coin très arrondi */
+    }
+}
+
+@keyframes neuf {
+    0% {
+        width: 0%;
+        border-radius: 0;
+    }
+    100% {
+        width: 90%;
+        border-radius: 9999px; /* Utilisez une valeur suffisamment grande pour obtenir un coin très arrondi */
+    }
+}
+.animate-neuf {
+    animation: neuf 3s ease forwards; /* Réglez la durée et le timing de l'animation selon vos préférences */
+}
+
+.animate-six {
+    animation: six 3s ease forwards; /* Réglez la durée et le timing de l'animation selon vos préférences */
+}
+
+.animate-septcinq {
+    animation: septcinq 3s ease forwards; /* Réglez la durée et le timing de l'animation selon vos préférences */
 }
 
 .animate-davinci {
