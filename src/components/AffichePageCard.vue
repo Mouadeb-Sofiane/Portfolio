@@ -7,6 +7,7 @@
 
 <template>
     <div class="">
+      cc
       <h1>{{ nom_projet }}</h1>
       <p>{{ description_projet }}</p>
     </div>

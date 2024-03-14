@@ -1,6 +1,6 @@
 const { defineSlots, defineEmits, defineExpose, defineModel, defineOptions, withDefaults, } = await import('vue');
 export interface SchemaProjet {
-id?: string;
+id?: number;
 nom_projet: string;
 image_projet: string;
 lien_projet: string;

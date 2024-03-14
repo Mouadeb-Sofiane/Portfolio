@@ -46,54 +46,40 @@
       <IconMoon v-else class="h-6 w-6" />
     </button>
     <div>
-      <h1 :class="{ 'text-secondary': isDarkMode }">Sofiane Mouadeb</h1> 
-      <p :class="{ 'text-secondary': isDarkMode, 'text-primary': !isDarkMode }">Developpeur Full Stack</p> 
+      <h1 :class="{ 'text-secondary': isDarkMode, }" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">Sofiane Mouadeb</h1> 
+      <p :class="{ 'text-secondary': isDarkMode, 'text-primary': !isDarkMode }" class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">Développeur Full Stack</p> 
     </div>
-    <div id="text-container">
-            <div class="balise-img"><
-                <p class="col-blue">img</p>
-                <p class="col-blue-w">src=</p>
-                <p class="col-orange">"SofianeMOUADEB.png"</p>
-                <p class="col-blue-w">alt=</p>
-                <p class="col-orange">"Ma photo de profil"</p>>
-            </div>
+    <div id="text-container" class="overflow-hidden whitespace-nowrap animate-typing">
+        <div class="flex items-center">
+          <p class="text-blue-500 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mr-1">< img</p>
+          <p class="text-blue-600 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">src=</p>
+          <p class="text-orange-600 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">"SofianeMOUADEB.png"</p>
+          <p class="text-blue-600 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">alt=</p>
+          <p class="text-orange-600 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">"Ma photo de profil" ></p>
         </div>
-        <div id="image-container">
-            <img src="https://www.w3schools.com/w3images/avatar2.png" alt="Votre image">
-        </div>
-        <div :class="{ 'text-secondary': isDarkMode, 'text-primary': !isDarkMode }">
+      </div>
+      <div id="image-container" class="hidden sm:block w-15">
+        <img src="https://www.w3schools.com/w3images/avatar2.png" alt="Sofiane-Mouadeb_photo">
+      </div>
+    <div>
+        <div :class="{ 'text-secondary': isDarkMode, 'text-primary': !isDarkMode }" class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
           <p>Je suis actuellement étudiant au BUT MMI de Montbéliard.</p>
-          <p>Je souhaite devenir un développeur web full stack polivalent.</p>
-          <p>Je suis polivalent autant pour le front-end que le back-end.</p>
+          <p>Je souhaite devenir un développeur web full stack polyvalent.</p>
+          <p>Je suis polyvalent autant pour le front-end que le back-end.</p>
         </div>
-        <div>
-          <h2 :class="{ 'text-secondary': isDarkMode }">Qui suis-je ?</h2>
+     
+          <h2 :class="{ 'text-secondary': isDarkMode }" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">Qui suis-je ?</h2>
           <div>
             3 cards sur moi 
           </div>
         </div>
         <div>
-          <h2 :class="{ 'text-secondary': isDarkMode }">Mes compétences</h2>
-          <div>
-            <div>
-              <h3 :class="{ 'text-secondary': isDarkMode }">Developpement web</h3>
-              Icone de developpement web (HTML, CSS, JS, TS, PHP, SQL, Vue js, Wordpress .)
-            </div>
-            <div>
-              <h3 :class="{ 'text-secondary': isDarkMode }">Design</h3>
-              Icone de design ( Figma, Photoshop, Illustrator .)
-            </div>
-            <div>
-              <h3 :class="{ 'text-secondary': isDarkMode }">Communication</h3>
-              Icone de communication ( SEO, Drive, Google Analytics, Trello, Canva .)
-            </div>
-          </div>
           <div :class="{ 'text-secondary': isDarkMode }">
-            <h2 class="text-xl font-bold mb-4">Mes Compétences</h2>
+            <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4">Mes Compétences</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10 mr-8 ml-8">
               <div class="rounded-lg p-6 shadow-md" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-fourth': isDarkMode }">
                   <div class="flex items-center mb-2">
-                      <p class="text-lg">Développement Web</p>
+                      <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">Développement Web</p>
                   </div>
                   <div class="flex">
                     <IconHtml class="h-6 w-6 mr-3"/>
@@ -135,7 +121,7 @@
 
               <div class="rounded-lg p-6 shadow-md" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-fourth': isDarkMode }">
                   <div class="flex items-center mb-2">
-                      <p class="text-lg">Design</p>
+                      <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">Design</p>
                   </div>
                   <div class="flex">
                     <IconFigma class="h-8 w-8 mr-3 ml-5"/>
@@ -157,9 +143,9 @@
                   </div>
               </div>
 
-              <div class="rounded-lg p-6 shadow-md relative" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-fourth': isDarkMode }">
+              <div class="rounded-lg p-6 shadow-md" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-fourth': isDarkMode }">
                 <div class="flex items-center mb-2">
-                    <p class="text-lg">Communication</p>
+                    <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">Communication</p>
                 </div>
                   <div class="flex">
                     <IconDrive class="h-8 w-8 mr-3 ml-5" />
@@ -183,7 +169,7 @@
           </div>
           <div class="rounded-lg p-6 shadow-md relative mb-8 mr-8 ml-8" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-fourth': isDarkMode }">
               <div class="flex items-center">
-                <p class="text-lg">Audiovisuel</p>
+                <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">Audiovisuel</p>
               </div>
               <div class="flex">
                 <IconDaVinci class="h-8 w-8 mr-3 ml-5" />
@@ -295,9 +281,6 @@
     #text-container {
       overflow: hidden;
       white-space: nowrap;
-      font-family: Arial, sans-serif;
-      font-size: 16px;
-      color: gray; /* Ajoutez votre couleur préférée ici */
       animation: typing 3s steps(80) 1s forwards;
     }
 
