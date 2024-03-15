@@ -93,18 +93,7 @@
                         <div class="h-full bg-css absolute animate-neuf"></div>
                       </div>                 
                   </div>
-                  <div class="flex">
-                    <IconWordpress class="h-6 w-6 mr-3"/>
-                      <!-- Barre de progression -->
-                      <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
-                        <div class="h-full bg-wp absolute animate-septcinq"></div>
-                      </div>  
-                      <IconPhp class="h-8 w-8 mr-3 ml-5"/>
-                      <!-- Barre de progression -->
-                      <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
-                        <div class="h-full bg-php absolute animate-six"></div>
-                      </div>                 
-                  </div>
+                  
                   <div class="flex">
                     <IconVuejs class="h-6 w-6 mr-3"/>
                       <!-- Barre de progression -->
@@ -115,6 +104,19 @@
                       <!-- Barre de progression -->
                       <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
                         <div class="h-full bg-tailwindcss absolute animate-septcinq"></div>
+                      </div>                 
+                  </div>
+
+                  <div class="flex">
+                    <IconWordpress class="h-6 w-6 mr-3"/>
+                      <!-- Barre de progression -->
+                      <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
+                        <div class="h-full bg-wp absolute animate-septcinq"></div>
+                      </div>  
+                      <IconPhp class="h-8 w-8 mr-3 ml-5"/>
+                      <!-- Barre de progression -->
+                      <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
+                        <div class="h-full bg-php absolute animate-six"></div>
                       </div>                 
                   </div>
               </div>
@@ -129,18 +131,21 @@
                         <div class="h-full bg-figma absolute animate-progress"></div>
                       </div>  
                   </div>
-                  <div class="flex"> 
-                    <IconPhotoshop class="h-8 w-8 mr-3 ml-5"/>
-                      <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
-                        <div class="h-full bg-photoshop absolute animate-six"></div>
-                      </div> 
-                  </div>
+
                   <div class="flex">
                     <IconIllustrator class="h-8 w-8 mr-3 ml-5"/>
                       <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
                         <div class="h-full bg-illustrator absolute animate-septcinq"></div>
                       </div> 
                   </div>
+                  
+                  <div class="flex"> 
+                    <IconPhotoshop class="h-8 w-8 mr-3 ml-5"/>
+                      <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
+                        <div class="h-full bg-photoshop absolute animate-six"></div>
+                      </div> 
+                  </div>
+                  
               </div>
 
               <div class="rounded-lg p-6 shadow-md" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-fourth': isDarkMode }">
