@@ -16,6 +16,9 @@
   import IconTrello from './icon/IconTrello.vue';
   import IconCanva from './icon/IconCanva.vue';
   import IconDaVinci from './icon/IconDaVinci.vue';
+import IconPocketbase from './icon/IconPocketbase.vue';
+import IconSupabase from './icon/IconSupabase.vue';
+import SofianePhoto from './icon/SofianePhoto.vue';
 
   const isDarkMode = ref(false);
 
@@ -39,47 +42,57 @@
 </script>
 
 <template>
-  <div :class="{ 'dark': isDarkMode, 'bg-secondary': !isDarkMode, 'bg-primary': isDarkMode }" class="min-h-screen">
+  <div :class="{ 'dark': isDarkMode, 'bg-gray-100': !isDarkMode, 'bg-primary': isDarkMode }" class="min-h-screen pl-7 pr-7">
     <!-- Utilisation d'icônes pour le mode sombre/clair -->
     <button @click="toggleDarkMode" class="fixed top-20 right-4 p-2 bg-accent border border-gray-900 rounded-full  dark:text-gray-300">
       <IconSun v-if="isDarkMode" class="h-6 w-6" />
       <IconMoon v-else class="h-6 w-6" />
     </button>
-    <div>
-      <h1 :class="{ 'text-secondary': isDarkMode, }" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">Sofiane Mouadeb</h1> 
-      <p :class="{ 'text-secondary': isDarkMode, 'text-primary': !isDarkMode }" class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">Développeur Full Stack</p> 
-    </div>
-    <div id="text-container" class="overflow-hidden whitespace-nowrap animate-typing">
-        <div class="flex items-center">
-          <p class="text-blue-500 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mr-1">< img</p>
-          <p class="text-blue-600 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">src=</p>
-          <p class="text-orange-600 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">"SofianeMOUADEB.png"</p>
-          <p class="text-blue-600 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">alt=</p>
-          <p class="text-orange-600 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">"Ma photo de profil" ></p>
+  
+        <div class="container mx-auto flex pt-8 md:flex-row flex-col items-center">
+            <div
+                class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                <h1 :class="{ 'text-secondary': isDarkMode }" class="title-font sm:text-6xl text-3xl mb-4 font-medium">Sofiane
+                    <br>Mouadeb
+                    <h2 :class="{ 'text-secondary': isDarkMode }" class="title-font sm:text-2xl mt-5 md:ml-2 lg:ml-2 text-xl mb-4 font-medium">Developpeur Web backend et frontend</h2>
+                </h1>
+                <p class="mb-8 md:ml-2 lg:ml-2 leading-relaxed text-justify" :class="{ 'text-secondary': isDarkMode, 'text-primary': !isDarkMode }">Je suis actuellement étudiant au BUT MMI de Montbéliard.
+                  Je souhaite devenir un développeur web full stack polyvalent.
+                  Je suis polyvalent autant pour le front-end que le back-end.</p>
+                <div class="flex justify-center">
+                    <button
+                        class="inline-flex md:ml-2 lg:ml-2 text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">Contact</button>
+                </div>
+            </div>
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-16">
+              <div id="image-container" class="flex justify-center text-center">
+                <SofianePhoto class="flex justify-center items-center rounded-full" alt="Sofiane-Mouadeb_photo"/>
+              </div>
+              
+            <div id="text-container" class="overflow-hidden whitespace-nowrap animate-typing">
+              <div class="flex items-center mb-6">
+                <p class="text-blue-500 text-sm sm:text-basse md:text-m lg:text-m xl:text-m mr-1">&lt;img</p>
+                <p class="text-blue-600 text-sm sm:text-basse md:text-m lg:text-m xl:text-m">src=</p>
+                <p class="text-orange-600 text-sm sm:text-basse md:text-m lg:text-m xl:text-m mr-1">"SofianeMOUADEB.png"</p>
+                <p class="text-blue-600 text-sm sm:text-basse md:text-m lg:text-m xl:text-m">alt=</p>
+                <p class="text-orange-600 text-sm sm:text-basse md:text-m lg:text-m xl:text-m">"Ma photo de profil" ></p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div id="image-container" class="hidden sm:block w-15">
-        <img src="https://www.w3schools.com/w3images/avatar2.png" alt="Sofiane-Mouadeb_photo">
-      </div>
-    <div>
-        <div :class="{ 'text-secondary': isDarkMode, 'text-primary': !isDarkMode }" class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
-          <p>Je suis actuellement étudiant au BUT MMI de Montbéliard.</p>
-          <p>Je souhaite devenir un développeur web full stack polyvalent.</p>
-          <p>Je suis polyvalent autant pour le front-end que le back-end.</p>
-        </div>
-     
+
           <h2 :class="{ 'text-secondary': isDarkMode }" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">Qui suis-je ?</h2>
           <div>
             3 cards sur moi 
           </div>
-        </div>
+
         <div>
           <div :class="{ 'text-secondary': isDarkMode }">
             <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4">Mes Compétences</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10 mr-8 ml-8">
               <div class="rounded-lg p-6 shadow-md" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-fourth': isDarkMode }">
                   <div class="flex items-center mb-2">
-                      <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">Développement Web</p>
+                      <p class="text-lg sm:text-l md:text-xl lg:text-2xl xl:text-3xl mb-6">Développement Web</p>
                   </div>
                   <div class="flex">
                     <IconHtml class="h-6 w-6 mr-3"/>
@@ -93,7 +106,6 @@
                         <div class="h-full bg-css absolute animate-neuf"></div>
                       </div>                 
                   </div>
-                  
                   <div class="flex">
                     <IconVuejs class="h-6 w-6 mr-3"/>
                       <!-- Barre de progression -->
@@ -106,7 +118,6 @@
                         <div class="h-full bg-tailwindcss absolute animate-septcinq"></div>
                       </div>                 
                   </div>
-
                   <div class="flex">
                     <IconWordpress class="h-6 w-6 mr-3"/>
                       <!-- Barre de progression -->
@@ -119,11 +130,23 @@
                         <div class="h-full bg-php absolute animate-six"></div>
                       </div>                 
                   </div>
+                  <div class="flex">
+                    <IconPocketbase class="h-6 w-6 mr-3"/>
+                      <!-- Barre de progression -->
+                      <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
+                        <div class="h-full bg-gray-600 absolute animate-septcinq"></div>
+                      </div>  
+                      <IconSupabase class="h-8 w-8 mr-3 ml-5"/>
+                      <!-- Barre de progression -->
+                      <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
+                        <div class="h-full bg-green-600 absolute animate-six"></div>
+                      </div>                 
+                  </div>
               </div>
 
               <div class="rounded-lg p-6 shadow-md" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-fourth': isDarkMode }">
                   <div class="flex items-center mb-2">
-                      <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">Design</p>
+                      <p class="text-lg sm:text-l md:text-xl lg:text-2xl xl:text-3xl mb-6">Design</p>
                   </div>
                   <div class="flex">
                     <IconFigma class="h-8 w-8 mr-3 ml-5"/>
@@ -131,26 +154,23 @@
                         <div class="h-full bg-figma absolute animate-progress"></div>
                       </div>  
                   </div>
-
                   <div class="flex">
                     <IconIllustrator class="h-8 w-8 mr-3 ml-5"/>
                       <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
                         <div class="h-full bg-illustrator absolute animate-septcinq"></div>
                       </div> 
                   </div>
-                  
                   <div class="flex"> 
                     <IconPhotoshop class="h-8 w-8 mr-3 ml-5"/>
                       <div class="h-3 w-40 bg-white rounded-full overflow-hidden mt-2 relative">
                         <div class="h-full bg-photoshop absolute animate-six"></div>
                       </div> 
                   </div>
-                  
               </div>
 
               <div class="rounded-lg p-6 shadow-md" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-fourth': isDarkMode }">
                 <div class="flex items-center mb-2">
-                    <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">Communication</p>
+                    <p class="text-lg sm:text-l md:text-xl lg:text-2xl xl:text-3xl mb-6">Communication</p>
                 </div>
                   <div class="flex">
                     <IconDrive class="h-8 w-8 mr-3 ml-5" />
@@ -172,9 +192,10 @@
                   </div> 
             </div>
           </div>
+
           <div class="rounded-lg p-6 shadow-md relative mb-8 mr-8 ml-8" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-fourth': isDarkMode }">
               <div class="flex items-center">
-                <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">Audiovisuel</p>
+                <p class="text-lg sm:text-l md:text-xl lg:text-2xl xl:text-3xl mb-6">Audiovisuel</p>
               </div>
               <div class="flex">
                 <IconDaVinci class="h-8 w-8 mr-3 ml-5" />
@@ -245,6 +266,7 @@
         border-radius: 9999px; /* Utilisez une valeur suffisamment grande pour obtenir un coin très arrondi */
     }
 }
+
 .animate-neuf {
     animation: neuf 3s ease forwards; /* Réglez la durée et le timing de l'animation selon vos préférences */
 }
@@ -261,7 +283,6 @@
     animation: davinci 3s ease forwards; /* Réglez la durée et le timing de l'animation selon vos préférences */
 }
 
-
 .animate-progress {
     animation: progress 3s ease forwards;
 }
@@ -269,10 +290,6 @@
 .animate-progress1 {
     animation: progress 3s ease forwards;
 }
-
-
-
-
 
 @keyframes typing {
       from {
@@ -286,33 +303,15 @@
     #text-container {
       overflow: hidden;
       white-space: nowrap;
-      animation: typing 3s steps(80) 1s forwards;
+      animation: typing 2s steps(80) 0.05s forwards;
     }
 
     #image-container {
       display: none;
-      width: 15%;
     }
 
     #image-container.show {
       display: block;
     }
 
-    .col-blue {
-      color: blue;
-    }
-
-    .col-blue-w {
-      color: slateblue;
-    }
-
-    .col-orange {
-      color: #9e6a03;
-    }
-
-    .balise-img {
-      display: flex;
-      flex-direction: row;
-      gap: 3px;
-    }
 </style>

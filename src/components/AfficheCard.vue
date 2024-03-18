@@ -15,11 +15,11 @@ defineProps<SchemaProjet>()
             {{ nom_projet }}
             </h1>
             <div class="w-32 h-2 bg-green-500 rounded-full mb-5 transform translate-y-20 group-hover:translate-y-0 duration-300">
-                    <div class="relative w-32 h-2 bg-yellow-500 rounded-full mb-5 overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-green-500 rounded-full group-hover:animate-slide duration-300"></div>
+                    <div class="w-32 h-2 bg-yellow-500 rounded-full mb-5 overflow-hidden">
+                        <div class="inset-0 bg-gradient-to-r from-blue-400 to-green-500 rounded-full group-hover:animate-slide duration-300"></div>
                     </div>
             </div>
-            <p class="opacity-0 text-white text- group-hover:opacity-80 transform duration-500">
+            <p class="opacity-0 text-white text-l group-hover:opacity-80 transform duration-500 text-justify">
                 {{ description_projet }}
             
             </p>

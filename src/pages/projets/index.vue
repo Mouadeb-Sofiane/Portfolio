@@ -24,12 +24,12 @@ let {data: tableauprojet, error} = await supabase
 
 <template>
     <div class="relative">
-        <button @click="toggleDarkMode" class="fixed top-20 right-4 p-2 bg-accent border border-gray-900 rounded-full  dark:text-gray-300 z-10">
+        <button @click="toggleDarkMode" class="fixed top-20 right-4 p-2 bg-accent border border-gray-900 rounded-full  dark:text-gray-100 z-10">
             <IconSun v-if="isDarkMode" class="h-6 w-6" />
             <IconMoon v-else class="h-6 w-6" />
         </button>
 
-    <div :class="{ 'dark': isDarkMode, 'bg-secondary': !isDarkMode, 'bg-primary': isDarkMode }" class="min-h-screen">
+    <div :class="{ 'dark': isDarkMode, 'bg-gray-100': !isDarkMode, 'bg-primary': isDarkMode }" class="min-h-screen">
         <h1 :class="{ 'text-secondary': isDarkMode, 'text-primary': !isDarkMode }">Mes projets</h1>
         <p :class="{ 'text-secondary': isDarkMode, 'text-primary': !isDarkMode }">Voici une liste de mes projets</p>
             <div class="grid grid-cols-3 gap-4">
