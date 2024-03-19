@@ -1,17 +1,5 @@
-<script setup lang="ts">
-    import { ref, defineProps, onMounted } from 'vue';
-    import { RouterLink, RouterView } from 'vue-router';
-
-    const isMobileMenuOpen = ref(false);
-
-    const toggleMobileMenu = () => {
-        isMobileMenuOpen.value = !isMobileMenuOpen.value;
-    };
-
-</script>
-
 <template>
-  <header class="bg-primary py-4 text-secondary">
+  <header class="bg-primary py-4 text-secondary relative">
     <div class="flex justify-between items-center px-4">
       <div>
         <h1 class="text-white text-lg font-semibold">Mon Site</h1>
@@ -27,7 +15,7 @@
           </svg>
         </button>
       </div>
-      <nav :class="{ 'hidden': !isMobileMenuOpen }" class="md:flex md:items-center md:space-x-4">
+      <nav :class="{ 'hidden': !isMobileMenuOpen, 'flex-col': isMobileMenuOpen }" class="md:flex md:items-center md:space-x-4 md:w-auto">
         <ul class="flex flex-col md:flex-row md:space-x-4 md:space-y-0">
           <li>
             <RouterLink to="/" class="text-white hover:text-gray-300">Accueil</RouterLink>
@@ -45,11 +33,23 @@
   </header>
 </template>
 
+<script setup lang="ts">
+import { ref } from 'vue';
+
+const isMobileMenuOpen = ref(false);
+
+const toggleMobileMenu = () => {
+    isMobileMenuOpen.value = !isMobileMenuOpen.value;
+};
+</script>
 
 <style scoped>
 @media (max-width: 768px) {
   nav.md\:hidden {
     display: none !important;
+  }
+  nav.md\:flex-col {
+    flex-direction: column;
   }
 }
 </style>

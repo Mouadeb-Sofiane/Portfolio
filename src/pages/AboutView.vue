@@ -3,7 +3,7 @@
 <div id="info">
 	Hold and drag left or right to view the opposite side.
 </div>
-
+</template>
 <style>
 
 * {
@@ -28,5 +28,11 @@ body{
 	bottom: 2vh;
 }
 </style>
-</template>
-<script></script>
+
+<script>
+import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
+
+</script>

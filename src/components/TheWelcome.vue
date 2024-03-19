@@ -19,6 +19,7 @@
 import IconPocketbase from './icon/IconPocketbase.vue';
 import IconSupabase from './icon/IconSupabase.vue';
 import SofianePhoto from './icon/SofianePhoto.vue';
+import IconDev from './icon/IconDev.vue';
 
   const isDarkMode = ref(false);
 
@@ -52,11 +53,12 @@ import SofianePhoto from './icon/SofianePhoto.vue';
         <div class="container mx-auto flex pt-8 md:flex-row flex-col items-center">
             <div
                 class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                <h1 :class="{ 'text-secondary': isDarkMode }" class="title-font sm:text-6xl text-3xl mb-4 font-medium">Sofiane
-                    <br>Mouadeb
-                    <h2 :class="{ 'text-secondary': isDarkMode }" class="title-font sm:text-2xl mt-5 md:ml-2 lg:ml-2 text-xl mb-4 font-medium">Developpeur Web backend et frontend</h2>
-                </h1>
-                <p class="mb-8 md:ml-2 lg:ml-2 leading-relaxed text-justify" :class="{ 'text-secondary': isDarkMode, 'text-primary': !isDarkMode }">Je suis actuellement étudiant au BUT MMI de Montbéliard.
+                <h1 :class="{ 'text-secondary': isDarkMode }" class="title-font sm:text-6xl text-3xl mb-4 font-medium" style="font-family: 'Viga'">Sofiane</h1>
+                <h1 :class="{ 'text-secondary': isDarkMode }" class="title-font sm:text-6xl text-3xl mb-4 ml-14 font-medium" style="font-family: 'Viga'">Mouadeb</h1>
+                    <h2 :class="{ 'text-secondary': isDarkMode }" class="title-font sm:text-2xl mt-5 md:ml-2 lg:ml-2 text-xl mb-4 font-medium" style="font-family: 'Viga'">Developpeur Web backend et frontend</h2>
+                
+
+                <p class="mb-8 md:ml-2 lg:ml-2 leading-relaxed text-justify font-semibold" :class="{ 'text-secondary': isDarkMode, 'text-primary': !isDarkMode }" style="font-family: 'Inter'">Je suis actuellement étudiant au BUT MMI de Montbéliard.
                   Je souhaite devenir un développeur web full stack polyvalent.
                   Je suis polyvalent autant pour le front-end que le back-end.</p>
                 <div class="flex justify-center">
@@ -65,22 +67,14 @@ import SofianePhoto from './icon/SofianePhoto.vue';
                 </div>
             </div>
             <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-16">
-              <div id="image-container" class="flex justify-center text-center">
-                <SofianePhoto class="flex justify-center items-center rounded-full" alt="Sofiane-Mouadeb_photo"/>
-              </div>
-              
-            <div id="text-container" class="overflow-hidden whitespace-nowrap animate-typing">
-              <div class="flex items-center mb-6">
-                <p class="text-blue-500 text-sm sm:text-basse md:text-m lg:text-m xl:text-m mr-1">&lt;img</p>
-                <p class="text-blue-600 text-sm sm:text-basse md:text-m lg:text-m xl:text-m">src=</p>
-                <p class="text-orange-600 text-sm sm:text-basse md:text-m lg:text-m xl:text-m mr-1">"SofianeMOUADEB.png"</p>
-                <p class="text-blue-600 text-sm sm:text-basse md:text-m lg:text-m xl:text-m">alt=</p>
-                <p class="text-orange-600 text-sm sm:text-basse md:text-m lg:text-m xl:text-m">"Ma photo de profil" ></p>
+              <div class="flex justify-center text-center ">
+                <SofianePhoto class="flex justify-center items-center rounded-full z-10" alt="Sofiane-Mouadeb_photo"/>
               </div>
             </div>
-          </div>
-        </div>
 
+
+        </div>
+        <IconDev class="h-96 w-96 mr-3 ml-5"/>
           <h2 :class="{ 'text-secondary': isDarkMode }" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">Qui suis-je ?</h2>
           <div>
             3 cards sur moi 
@@ -291,27 +285,13 @@ import SofianePhoto from './icon/SofianePhoto.vue';
     animation: progress 3s ease forwards;
 }
 
-@keyframes typing {
-      from {
-        width: 0;
-      }
-      to {
-        width: 100%;
-      }
-    }
 
-    #text-container {
-      overflow: hidden;
-      white-space: nowrap;
-      animation: typing 2s steps(80) 0.05s forwards;
-    }
 
-    #image-container {
-      display: none;
-    }
 
-    #image-container.show {
-      display: block;
-    }
-
+    @font-face {
+  font-family: "Viga";
+  src: url("../fonts/Viga-Regular.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 </style>
