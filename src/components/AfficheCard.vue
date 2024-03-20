@@ -5,7 +5,7 @@ defineProps<SchemaProjet>()
 </script>
 
 <template>
-    <div class="">
+    <div class="mb-10">
         <article 
         class="mx-auto max-w-sm shadow-xl bg-cover bg-center min-h-150 transform duration-500 hover:-translate-y-2 cursor-pointer group" 
         :style="{ 'background-image': `url(${image_projet})` }"
