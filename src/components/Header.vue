@@ -1,55 +1,58 @@
+<script setup lang="ts">
+  document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+  });
+</script>
+
 <template>
-  <header class="bg-primary py-4 text-secondary relative">
-    <div class="flex justify-between items-center px-4">
-      <div>
-        <h1 class="text-white text-lg font-semibold">Mon Site</h1>
-      </div>
-      <!-- Menu mobile (visible sur les petits écrans) -->
-      <div class="md:hidden">
-        <!-- Utilisation d'une croix pour fermer le menu -->
-        <button @click="toggleMobileMenu" class="text-white focus:outline-none relative">
-          <!-- Utilisation d'un bouton hamburger pour ouvrir et fermer le menu -->
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path v-if="!isMobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-            <path v-else stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-      <nav :class="{ 'hidden': !isMobileMenuOpen, 'flex-col': isMobileMenuOpen }" class="md:flex md:items-center md:space-x-4 md:w-auto">
-        <ul class="flex flex-col md:flex-row md:space-x-4 md:space-y-0">
-          <li>
-            <RouterLink to="/" class="text-white hover:text-gray-300">Accueil</RouterLink>
-          </li>
-          <li>
-            <RouterLink to="/projets" class="text-white hover:text-gray-300">Mes Projets</RouterLink>
-          </li>
-          <li>
-            <RouterLink to="" class="text-white hover:text-gray-300">Créer des maisons</RouterLink>
-          </li>
-          
-        </ul>
+  <header>
+      <nav class="bg-gray-800 p-4">
+          <div class="flex justify-between items-center">
+          <div class="flex-shrink-0">
+              <img src="../assets/img/photo1.png" class="h-8" alt="logo du site"/>
+          </div>
+          <div class="md:hidden">
+              <!-- Hamburger icon -->
+              <button id="menu-toggle" type="button" class="text-white hover:text-gray-300 focus:outline-none focus:text-gray-300">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="menu w-6 h-6">
+                  <path fill-rule="evenodd" d="M3 9h14a1 1 0 110 2H3a1 1 0 110-2zm0-4h14a1 1 0 110 2H3a1 1 0 110-2zm0 8h14a1 1 0 110 2H3a1 1 0 110-2z" clip-rule="evenodd"></path>
+              </svg>
+              </button>
+          </div>
+          <div class="hidden md:block">
+              <div class="flex space-x-4">
+                  <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                      <li>
+                          <RouterLink to="/" class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white" aria-current="page">Accueil</RouterLink>
+                      </li>
+                      <li>
+                          <RouterLink to="/projets" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Projets</RouterLink>
+                      </li>
+                  </ul>
+              </div>    
+          </div>
+        </div>
+          <!-- Mobile menu, toggle classNamees based on menu state. -->
+          <div id="mobile-menu" class="md:hidden hidden">
+          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                  <li>
+                      <RouterLink to="/" class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white" aria-current="page">Accueil</RouterLink>
+                  </li>
+                  <li>
+                      <RouterLink to="/projet" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Projets</RouterLink>
+                  </li>
+              </ul>
+          </div>
+          </div>
       </nav>
-    </div>
   </header>
 </template>
 
-<script setup lang="ts">
-import { ref } from 'vue';
-
-const isMobileMenuOpen = ref(false);
-
-const toggleMobileMenu = () => {
-    isMobileMenuOpen.value = !isMobileMenuOpen.value;
-};
-</script>
-
-<style scoped>
-@media (max-width: 768px) {
-  nav.md\:hidden {
-    display: none !important;
-  }
-  nav.md\:flex-col {
-    flex-direction: column;
-  }
-}
-</style>

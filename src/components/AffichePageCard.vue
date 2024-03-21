@@ -54,6 +54,16 @@ const modules = [Autoplay, Pagination, Navigation];
       </div>
     </div>
 
+    <h2 class="text-2xl underline mb-5">{{ title2 }}</h2>
+    <div class="flex flex-col md:flex-row gap-11">
+      <!-- Images prenant 40% de l'espace sur les petits écrans et 2/5 sur les grands écrans -->
+      <div class="flex flex-col w-full md:w-2/5">
+        <img class="w-full" :src="img2" alt="Image projet" />
+      </div>
+      <!-- Description prenant 60% de l'espace sur les petits écrans et 3/5 sur les grands écrans -->
+      <p class="text-justify w-full md:w-3/5">{{ desc2 }}</p>
+    </div>
+
     <br />
     <p class="text-justify">{{ desc2 }}</p>
     <p class="text-justify">{{ desc3 }}</p>
@@ -75,7 +85,7 @@ const modules = [Autoplay, Pagination, Navigation];
     <img class="w-auto h-72" :src="img10" alt="Image projet" />
     <img class="w-auto h-72" :src="img11" alt="Image projet" />
     <img class="w-auto h-72" :src="img12" alt="Image projet" />
-
+    
     <swiper
       :spaceBetween="30"
       :centeredSlides="true"
