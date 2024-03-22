@@ -11,6 +11,7 @@ video_p: string;
 logo: string;
 desc1: string;
 desc2: string;
+desc2b : string;
 desc3: string;
 desc4: string;
 desc5: string;

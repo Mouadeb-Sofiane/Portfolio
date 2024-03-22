@@ -55,3 +55,4 @@
     <AffichePageCard v-bind="projet" :nom_projet="projet.nom_projet" :image_projet="projet.image_projet" :lien_projet="projet.lien_projet" :description_projet="projet.description_projet" :titre_page="projet.titre_page" :description_page="projet.description_page" :video_p="projet.video_p" :logo="projet.logo" :desc1="projet.desc1" :desc2="projet.desc2" :desc3="projet.desc3" :desc4="projet.desc4" :desc5="projet.desc5" :desc6="projet.desc6" />
   </div>
 </template>
+a<::<==

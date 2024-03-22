@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { defineProps } from 'vue';
-  import type { SchemaProjet } from '@/types';
+  import type { Database, Tables } from '@/supabase-types';
   import { ref } from 'vue';
   // Import Swiper Vue.js components
   import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -46,7 +46,7 @@ const modules = [Autoplay, Pagination, Navigation];
     <h2 class="text-2xl underline mb-5">{{ title1 }}</h2>
     <div class="flex flex-col md:flex-row gap-11">
       <!-- Description prenant 60% de l'espace sur les petits écrans et 3/5 sur les grands écrans -->
-      <p class="text-justify w-full md:w-3/5">{{ desc1 }}</p>
+      <p class="text-justify w-full md:w-3/5">{{ description1 }}</p>
 
       <!-- Images prenant 40% de l'espace sur les petits écrans et 2/5 sur les grands écrans -->
       <div class="flex flex-col w-full md:w-2/5">
@@ -58,18 +58,21 @@ const modules = [Autoplay, Pagination, Navigation];
     <div class="flex flex-col md:flex-row gap-11">
       <!-- Images prenant 40% de l'espace sur les petits écrans et 2/5 sur les grands écrans -->
       <div class="flex flex-col w-full md:w-2/5">
-        <img class="w-full" :src="img2" alt="Image projet" />
+        <img class="w-full" :src="img3" alt="Image projet" />
       </div>
       <!-- Description prenant 60% de l'espace sur les petits écrans et 3/5 sur les grands écrans -->
-      <p class="text-justify w-full md:w-3/5">{{ desc2 }}</p>
-    </div>
+      <div class="text-justify w-full md:w-3/5">
+        <p>{{ description2 }}</p><br>
+        <p>{{ description2b }}</p>
+      </div>
+      
 
+    </div>
+    <h2 class="text-2xl underline mb-5">{{ title3 }}</h2>
     <br />
-    <p class="text-justify">{{ desc2 }}</p>
-    <p class="text-justify">{{ desc3 }}</p>
-    <p class="text-justify">{{ desc4 }}</p>
+    
     <p class="text-justify">{{ desc5 }}</p>
-    <p class="text-justify">{{ desc6 }}</p>
+    
     <div class="flex">
       <img class="w-auto h-32" :src="img2" alt="Image projet" />
       <img class="w-auto h-32" :src="img3" alt="Image projet" />
