@@ -115,28 +115,31 @@ const modules = [Autoplay, Pagination, Navigation];
           <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" :src="maquette" allowfullscreen></iframe>
         </div>
         <div>
-          <h2 class="text-2xl underline mb-5">{{ title5 }}</h2>
+          
           <!-- <div>
             <p class="text-justify">{{ description4 }}</p>
           </div> -->
-          <button>
-            <a :href="lien_projet">Acceder au site</a>
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <a :href="lien_projet">Accéder au site</a>
           </button>
+
         </div>
         <div class="flex flex-col md:flex-row gap-11">
           <!-- Images prenant 40% de l'espace sur les petits écrans et 2/5 sur les grands écrans -->
           <div class="flex flex-col w-full md:w-2/5">
+            <h2 class="text-2xl underline mb-5">{{ title5 }}</h2>
             <p class="text-justify">{{ description4 }}</p>
           </div>
           <!-- Description prenant 60% de l'espace sur les petits écrans et 3/5 sur les grands écrans -->
           <div class="text-justify w-full md:w-3/5">
+            <h2 class="text-2xl underline mb-5">{{ title6 }}</h2>
             <div class="flex">
-              <img class="w-auto h-24" :src="icon"   />   
-              <img class="w-auto h-24" :src="icon2"  />   
-              <img class="w-auto h-24" :src="icon3"  />   
-              <img class="w-auto h-24" :src="icon4"  />   
-              <img class="w-auto h-24" :src="icon5"  /> 
-              <img class="w-auto h-24" :src="icon6"  />
+              <img class="w-18 h-18" :src="icon"   />   
+              <img class="w-18 h-18" :src="icon2"  />   
+              <img class="w-24 h-24" :src="icon3"  />   
+              <img class="w-24 h-24" :src="icon4"  />   
+              <img class="w-24 h-24" :src="icon5"  /> 
+              <img class="w-24 h-24" :src="icon6"  />
             </div>
           </div>
         </div>

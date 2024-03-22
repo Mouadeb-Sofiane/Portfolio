@@ -30,7 +30,9 @@ let {data: tableauprojet, error} = await supabase
 
     <div :class="{ 'dark': isDarkMode, 'bg-gray-100': !isDarkMode, 'bg-primary': isDarkMode }" class="min-h-screen">
         <h1 :class="{ 'text-secondary': isDarkMode, 'text-primary': !isDarkMode }">Mes projets</h1>
-        <p :class="{ 'text-secondary': isDarkMode, 'text-primary': !isDarkMode }">Voici une liste de mes projets</p>
+        <p :class="{ 'text-secondary': isDarkMode, 'text-primary': !isDarkMode }">En MMI, nous avons réalisés beaucoup de projets qui ont aboutis. 
+                                                                                      Il y a ici une liste de sites que j'ai réalisés seul ou en équipe. 
+                                                                                      Je vous invite à les découvrir. Voici une liste de mes projets qui continuera de s'angrandir.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6-4 ">
                 <AfficheCard v-for="projet in tableauprojet" v-bind="projet" />
              </div>
