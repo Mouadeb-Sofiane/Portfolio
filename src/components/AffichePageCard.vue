@@ -1,5 +1,7 @@
 <script setup lang="ts">
   import { defineProps } from 'vue';
+  import IconPhp from './icon/IconPhp.vue';
+  import IconWordpress from './icon/IconWordpress.vue';
   import type { Database, Tables } from '@/supabase-types';
   import { ref } from "vue";
   defineProps <Database["public"]["Tables"]["Card"]["Row"]>(); 
@@ -14,7 +16,9 @@
 
   // import required modules
   import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-
+import type IconCss from './icon/IconCss.vue';
+import type IconHtml from './icon/IconHtml.vue';
+  
 
   const progressCircle = ref<HTMLElement | null>(null);
   const progressContent = ref<HTMLElement | null>(null);
@@ -112,12 +116,29 @@ const modules = [Autoplay, Pagination, Navigation];
         </div>
         <div>
           <h2 class="text-2xl underline mb-5">{{ title5 }}</h2>
-          <div>
-            <p>{{ description4 }}</p>
-          </div>
+          <!-- <div>
+            <p class="text-justify">{{ description4 }}</p>
+          </div> -->
           <button>
             <a :href="lien_projet">Acceder au site</a>
           </button>
+        </div>
+        <div class="flex flex-col md:flex-row gap-11">
+          <!-- Images prenant 40% de l'espace sur les petits écrans et 2/5 sur les grands écrans -->
+          <div class="flex flex-col w-full md:w-2/5">
+            <p class="text-justify">{{ description4 }}</p>
+          </div>
+          <!-- Description prenant 60% de l'espace sur les petits écrans et 3/5 sur les grands écrans -->
+          <div class="text-justify w-full md:w-3/5">
+            <div class="flex">
+              <img class="w-auto h-24" :src="icon"   />   
+              <img class="w-auto h-24" :src="icon2"  />   
+              <img class="w-auto h-24" :src="icon3"  />   
+              <img class="w-auto h-24" :src="icon4"  />   
+              <img class="w-auto h-24" :src="icon5"  /> 
+              <img class="w-auto h-24" :src="icon6"  />
+            </div>
+          </div>
         </div>
   </div>
 </template>

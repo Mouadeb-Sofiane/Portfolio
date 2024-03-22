@@ -17,6 +17,12 @@ export type Database = {
           description2b: string | null
           description3: string | null
           description4: string | null
+          icon: string | null
+          icon2: string | null
+          icon3: string | null
+          icon4: string | null
+          icon5: string | null
+          icon6: string | null
           id: number
           image_projet: string | null
           img1: string | null
@@ -48,6 +54,12 @@ export type Database = {
           description2b?: string | null
           description3?: string | null
           description4?: string | null
+          icon?: string | null
+          icon2?: string | null
+          icon3?: string | null
+          icon4?: string | null
+          icon5?: string | null
+          icon6?: string | null
           id?: number
           image_projet?: string | null
           img1?: string | null
@@ -79,6 +91,12 @@ export type Database = {
           description2b?: string | null
           description3?: string | null
           description4?: string | null
+          icon?: string | null
+          icon2?: string | null
+          icon3?: string | null
+          icon4?: string | null
+          icon5?: string | null
+          icon6?: string | null
           id?: number
           image_projet?: string | null
           img1?: string | null

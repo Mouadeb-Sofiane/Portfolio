@@ -16,10 +16,10 @@
   import IconTrello from './icon/IconTrello.vue';
   import IconCanva from './icon/IconCanva.vue';
   import IconDaVinci from './icon/IconDaVinci.vue';
-import IconPocketbase from './icon/IconPocketbase.vue';
-import IconSupabase from './icon/IconSupabase.vue';
-import SofianePhoto from './icon/SofianePhoto.vue';
-import IconDev from './icon/IconDev.vue';
+  import IconPocketbase from './icon/IconPocketbase.vue';
+  import IconSupabase from './icon/IconSupabase.vue';
+  import SofianePhoto from './icon/SofianePhoto.vue';
+  import IconDev from './icon/IconDev.vue';
 
   const isDarkMode = ref(false);
 
