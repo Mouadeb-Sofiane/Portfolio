@@ -134,8 +134,8 @@ const modules = [Autoplay, Pagination, Navigation];
           <div class="text-justify w-full md:w-3/5">
             <h2 class="text-2xl underline mb-5">{{ title6 }}</h2>
             <div class="flex">
-              <img class="w-18 h-18" :src="icon"   />   
-              <img class="w-18 h-18" :src="icon2"  />   
+              <img class="w-8 h-8" :src="icon"   />   
+              <img class="w-8 h-8" :src="icon2"  />   
               <img class="w-24 h-24" :src="icon3"  />   
               <img class="w-24 h-24" :src="icon4"  />   
               <img class="w-24 h-24" :src="icon5"  /> 
