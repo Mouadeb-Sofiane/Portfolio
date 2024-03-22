@@ -136,10 +136,10 @@ const modules = [Autoplay, Pagination, Navigation];
             <div class="flex">
               <img class="w-8 h-8" :src="icon"   />   
               <img class="w-8 h-8" :src="icon2"  />   
-              <img class="w-24 h-24" :src="icon3"  />   
-              <img class="w-24 h-24" :src="icon4"  />   
-              <img class="w-24 h-24" :src="icon5"  /> 
-              <img class="w-24 h-24" :src="icon6"  />
+              <img class="w-8 h-8" :src="icon3"  />   
+              <img class="w-8 h-8" :src="icon4"  />   
+              <img class="w-8 h-8" :src="icon5"  /> 
+              <img class="w-8 h-8" :src="icon6"  />
             </div>
           </div>
         </div>
