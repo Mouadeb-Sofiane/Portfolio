@@ -24,7 +24,15 @@
       progressCircle.value.style.setProperty('--progress', (1 - progress).toString());
       progressContent.value.textContent = `${Math.ceil(time / 1000)}s`;
     }
-  };
+  }
+
+
+// Fonction pour vérifier si l'URL de l'image est valide
+const isImageValid = (url) => {
+  const image = new Image();
+  image.src = url;
+  return image.complete && image.naturalHeight !== 0;
+};
 
 const modules = [Autoplay, Pagination, Navigation];
 </script>
@@ -98,24 +106,20 @@ const modules = [Autoplay, Pagination, Navigation];
         </template>
       </swiper>
     </div>
-        
-    <div class="flex">
-      <img class="w-auto h-32" :src="img2" alt="Image projet" />
-      <img class="w-auto h-32" :src="img3" alt="Image projet" />
-      <img class="w-auto h-32" :src="img4" alt="Image projet" />
-    </div>
-    <div class="grid grid-cols-4 gap-4">
-      <img class="w-auto h-80" :src="img6" alt="Image projet" />
-      <div></div>
-    </div>
-    <img class="w-auto h-72" :src="img7" alt="Image projet" />
-    <img class="w-auto h-72" :src="img8" alt="Image projet" />
-    <img class="w-auto h-72" :src="img9" alt="Image projet" />
-    <img class="w-auto h-72" :src="img10" alt="Image projet" />
-    <img class="w-auto h-72" :src="img11" alt="Image projet" />
-    <img class="w-auto h-72" :src="img12" alt="Image projet" />
-    
-    
+        <div>
+          <h2 class="text-2xl underline mb-5">{{ title4 }}</h2>
+          <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" :src="maquette" allowfullscreen></iframe>
+        </div>
+        <div>
+          <h2 class="text-2xl underline mb-5">{{ title5 }}</h2>
+          <div>
+            <p>{{ description4 }}</p>
+          </div>
+          
+          <button>
+            <a :href="lien_projet">Acceder au site</a>
+          </button>
+        </div>
   </div>
 </template>
 

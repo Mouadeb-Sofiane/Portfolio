@@ -16,6 +16,7 @@ export type Database = {
           description2: string | null
           description2b: string | null
           description3: string | null
+          description4: string | null
           id: number
           image_projet: string | null
           img1: string | null
@@ -24,14 +25,13 @@ export type Database = {
           img12: string | null
           img2: string | null
           img3: string | null
-          img4: string | null
-          img5: string | null
           img6: string | null
           img7: string | null
           img8: string | null
           img9: string | null
           lien_projet: string | null
           logo: string | null
+          maquette: string | null
           nom_projet: string | null
           title1: string | null
           title2: string | null
@@ -47,6 +47,7 @@ export type Database = {
           description2?: string | null
           description2b?: string | null
           description3?: string | null
+          description4?: string | null
           id?: number
           image_projet?: string | null
           img1?: string | null
@@ -55,14 +56,13 @@ export type Database = {
           img12?: string | null
           img2?: string | null
           img3?: string | null
-          img4?: string | null
-          img5?: string | null
           img6?: string | null
           img7?: string | null
           img8?: string | null
           img9?: string | null
           lien_projet?: string | null
           logo?: string | null
+          maquette?: string | null
           nom_projet?: string | null
           title1?: string | null
           title2?: string | null
@@ -78,6 +78,7 @@ export type Database = {
           description2?: string | null
           description2b?: string | null
           description3?: string | null
+          description4?: string | null
           id?: number
           image_projet?: string | null
           img1?: string | null
@@ -86,14 +87,13 @@ export type Database = {
           img12?: string | null
           img2?: string | null
           img3?: string | null
-          img4?: string | null
-          img5?: string | null
           img6?: string | null
           img7?: string | null
           img8?: string | null
           img9?: string | null
           lien_projet?: string | null
           logo?: string | null
+          maquette?: string | null
           nom_projet?: string | null
           title1?: string | null
           title2?: string | null
