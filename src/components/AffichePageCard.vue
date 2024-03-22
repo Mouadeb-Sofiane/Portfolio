@@ -115,7 +115,6 @@ const modules = [Autoplay, Pagination, Navigation];
           <div>
             <p>{{ description4 }}</p>
           </div>
-          
           <button>
             <a :href="lien_projet">Acceder au site</a>
           </button>
