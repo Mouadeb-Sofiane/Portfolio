@@ -15,9 +15,11 @@
   <header>
       <nav class="bg-gray-800 p-4">
           <div class="flex justify-between items-center">
-          <div class="flex-shrink-0">
-              <img src="../assets/img/SM.png" class="h-8" alt="logo du site"/>
-          </div>
+            <RouterLink to="/">
+                <div class="flex-shrink-0">
+                    <img src="../assets/img/SM.png" class="h-8" alt="logo du site"/>
+                </div>
+            </RouterLink>
           <div class="md:hidden">
               <!-- Hamburger icon -->
               <button id="menu-toggle" type="button" class="text-white hover:text-gray-300 focus:outline-none focus:text-gray-300">

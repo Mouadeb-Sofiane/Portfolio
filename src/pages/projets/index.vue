@@ -19,7 +19,6 @@ const toggleDarkMode = () => {
 let {data: tableauprojet, error} = await supabase
   .from('Card')
   .select('*');
-
 </script>
 
 <template>
