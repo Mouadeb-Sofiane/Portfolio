@@ -1,7 +1,8 @@
 <script setup lang="ts">
   import { defineProps } from 'vue';
   import type { Database, Tables } from '@/supabase-types';
-  import { ref } from 'vue';
+  import { ref } from "vue";
+  defineProps <Database["public"]["Tables"]["Card"]["Row"]>(); 
   // Import Swiper Vue.js components
   import { Swiper, SwiperSlide } from 'swiper/vue';
 
@@ -14,7 +15,6 @@
   // import required modules
   import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
-  defineProps<SchemaProjet>();
 
   const progressCircle = ref<HTMLElement | null>(null);
   const progressContent = ref<HTMLElement | null>(null);
@@ -65,14 +65,40 @@ const modules = [Autoplay, Pagination, Navigation];
         <p>{{ description2 }}</p><br>
         <p>{{ description2b }}</p>
       </div>
-      
-
     </div>
+
     <h2 class="text-2xl underline mb-5">{{ title3 }}</h2>
     <br />
-    
-    <p class="text-justify">{{ desc5 }}</p>
-    
+    <div>
+      <swiper
+        :spaceBetween="30"
+        :centeredSlides="true"
+        :autoplay="{
+          delay: 2500,
+          disableOnInteraction: false,
+        }"
+        :pagination="{
+          clickable: true,
+        }"
+        :navigation="true"
+        :modules="modules"
+        @autoplayTimeLeft="onAutoplayTimeLeft"
+        class="mySwiper"
+      >
+        <swiper-slide><img class="w-auto h-24" :src="img7" alt="Image projet" /></swiper-slide>
+        <swiper-slide><img class="w-auto h-24" :src="img8" alt="Image projet" /></swiper-slide>
+        <swiper-slide><img class="w-auto h-24" :src="img9" alt="Image projet" /></swiper-slide>
+        <swiper-slide><img class="w-auto h-24" :src="img10" alt="Image projet" /></swiper-slide>
+        <swiper-slide><img class="w-auto h-24" :src="img11" alt="Image projet" /></swiper-slide>
+        <swiper-slide><img class="w-auto h-24" :src="img12" alt="Image projet" /></swiper-slide>
+
+        <template #container-end>
+          <div class="autoplay-progress">
+          </div>
+        </template>
+      </swiper>
+    </div>
+        
     <div class="flex">
       <img class="w-auto h-32" :src="img2" alt="Image projet" />
       <img class="w-auto h-32" :src="img3" alt="Image projet" />
@@ -89,33 +115,7 @@ const modules = [Autoplay, Pagination, Navigation];
     <img class="w-auto h-72" :src="img11" alt="Image projet" />
     <img class="w-auto h-72" :src="img12" alt="Image projet" />
     
-    <swiper
-      :spaceBetween="30"
-      :centeredSlides="true"
-      :autoplay="{
-        delay: 2500,
-        disableOnInteraction: false,
-      }"
-      :pagination="{
-        clickable: true,
-      }"
-      :navigation="true"
-      :modules="modules"
-      @autoplayTimeLeft="onAutoplayTimeLeft"
-      class="mySwiper"
-    >
-      <swiper-slide><img class="w-auto h-24" :src="img7" alt="Image projet" /></swiper-slide>
-      <swiper-slide><img class="w-auto h-24" :src="img8" alt="Image projet" /></swiper-slide>
-      <swiper-slide><img class="w-auto h-24" :src="img9" alt="Image projet" /></swiper-slide>
-      <swiper-slide><img class="w-auto h-24" :src="img10" alt="Image projet" /></swiper-slide>
-      <swiper-slide><img class="w-auto h-24" :src="img11" alt="Image projet" /></swiper-slide>
-      <swiper-slide><img class="w-auto h-24" :src="img12" alt="Image projet" /></swiper-slide>
-
-      <template #container-end>
-        <div class="autoplay-progress">
-        </div>
-      </template>
-    </swiper>
+    
   </div>
 </template>
 

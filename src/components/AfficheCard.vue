@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { defineProps } from 'vue';
-import type { SchemaProjet } from '@/types';
-defineProps<SchemaProjet>()
+import type { Database, Tables } from '@/supabase-types';
+defineProps <Database["public"]["Tables"]["Card"]["Row"]>()
 </script>
 
 <template>
