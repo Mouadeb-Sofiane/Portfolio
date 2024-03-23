@@ -106,35 +106,41 @@ const modules = [Autoplay, Pagination, Navigation];
     </div>
  
     <div class="flex flex-col md:flex-row gap-11">
-        <div>
-          <h2 class="text-2xl underline mb-5" style="font-family: 'Viga'">{{ title4 }}</h2>
-          <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" :src="maquette" allowfullscreen></iframe>
+    <!-- Partie gauche avec l'iframe -->
+    <div class="w-full md:w-2/3">
+        <h2 class="text-2xl underline mb-5" style="font-family: 'Viga'">{{ title4 }}</h2>
+        <div class="aspect-w-16 aspect-h-9 h-full w-full">
+            <iframe class="h-full w-full" style="border: 1px solid rgba(0, 0, 0, 0.1);" :src="maquette" allowfullscreen></iframe>
         </div>
-        <div class="flex flex-col md:flex-row gap-11">
-          <!-- Images prenant 40% de l'espace sur les petits écrans et 2/5 sur les grands écrans -->
-          <div class="flex flex-col w-full md:w-5/5">
+    </div>
+    <!-- Partie droite avec le texte et les images -->
+    <div class="w-full md:w-1/3">
+        <div class="flex flex-col gap-5">
             <h2 class="text-2xl underline mb-5" style="font-family: 'Viga'">{{ title5 }}</h2>
             <p class="text-justify" style="font-family:'Poppins'">{{ description4 }}</p>
             <div class="mt-5">
-              <h2 class="text-2xl underline mb-5 mt-16" style="font-family: 'Viga'">{{ title6 }}</h2>
-                <div class="flex gap-10">
-                  <img class="w-8 h-8" :src="icon"   />   
-                  <img class="w-8 h-8" :src="icon2"  />   
-                  <img class="w-8 h-8" :src="icon3"  />   
-                  <img class="w-8 h-8" :src="icon4"  />   
-                  <img class="w-8 h-8" :src="icon5"  /> 
-                  <img class="w-8 h-8" :src="icon6"  />
+                <h2 class="text-2xl underline mb-5 mt-16" style="font-family: 'Viga'">{{ title6 }}</h2>
+                <div class="flex flex-wrap gap-10">
+                    <img class="w-8 h-8" :src="icon" />   
+                    <img class="w-8 h-8" :src="icon2" />   
+                    <img class="w-8 h-8" :src="icon3" />   
+                    <img class="w-8 h-8" :src="icon4" />   
+                    <img class="w-8 h-8" :src="icon5" /> 
+                    <img class="w-8 h-8" :src="icon6" />
                 </div>
             </div>  
-          </div>
         </div>
-      </div>
+    </div>
+</div>
+
           
-        <div class="flex mt-20">
-          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            <a :href="lien_projet">Accéder au site</a>
-          </button>
-        </div>
+      <div class="flex justify-center mt-20">
+    <button class="border border-white text-white bg-primary px-4 py-2 rounded relative overflow-hidden transition-transform duration-300 hover:scale-105">
+        <a :href="lien_projet">Accéder au site</a>
+        <div class="absolute inset-0 opacity-25 transform scale-150"></div>
+    </button>
+</div>
+
         
 
   </div>

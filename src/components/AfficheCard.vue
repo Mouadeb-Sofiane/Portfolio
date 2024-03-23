@@ -14,9 +14,9 @@ defineProps <Database["public"]["Tables"]["Card"]["Row"]>()
             <h1 class="text-white text-3xl mb-5 transform translate-y-20 group-hover:translate-y-0 duration-300">
             {{ nom_projet }}
             </h1>
-            <div class="w-32 h-2 bg-green-500 rounded-full mb-5 transform translate-y-20 group-hover:translate-y-0 duration-300">
-                <div class="w-32 h-2 bg-white rounded-full mb-5 overflow-hidden">
-                    <div class="inset-0 bg-gradient-to-r from-green-500 to-blue-400 rounded-full group-hover:animate-slide duration-300"></div>
+            <div class="relative w-32 h-2 mb-5 transform translate-y-20 group-hover:translate-y-0 duration-300">
+                <div class="w-full h-full bg-white rounded-full overflow-hidden">
+                    <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-green-500 to-blue-400 rounded-full animate-slide duration-300"></div>
                 </div>
             </div>
 

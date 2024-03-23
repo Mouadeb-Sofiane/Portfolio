@@ -48,8 +48,6 @@
       imageContainer?.classList.add('show');
     });
   });   
-
-  
 </script>
 
 <template>
@@ -62,38 +60,36 @@
   
         <div class="container mx-auto flex pt-8 md:flex-row flex-col items-center">
             <div
-                class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center mt-10">
                 <h1 :class="{ 'text-secondary': isDarkMode }" class="title-font sm:text-6xl text-3xl mb-4 font-medium" style="font-family: 'Viga'">Sofiane</h1>
                 <h1 :class="{ 'text-secondary': isDarkMode }" class="title-font sm:text-6xl text-3xl mb-4 ml-14 font-medium" style="font-family: 'Viga'">Mouadeb</h1>
                     <h2 :class="{ 'text-secondary': isDarkMode }" class="title-font sm:text-2xl mt-5 md:ml-2 lg:ml-2 text-xl mb-4 font-medium" style="font-family: 'Viga'">Developpeur Web backend et frontend</h2>
                 
 
-                <p class="mb-8 md:ml-2 lg:ml-2 leading-relaxed text-justify font-semibold" :class="{ 'text-secondary': isDarkMode, 'text-primary': !isDarkMode }" style="font-family: 'Poppins'">Je suis actuellement étudiant au BUT MMI de Montbéliard.
+                <p class="mb-8 md:ml-2 lg:ml-2 leading-relaxed text-justify font-semibold mt-4" :class="{ 'text-secondary': isDarkMode, 'text-primary': !isDarkMode }" style="font-family: 'Poppins'">Je suis actuellement étudiant au BUT MMI de Montbéliard.
                   Je souhaite devenir un développeur web full stack polyvalent.
                   Je suis polyvalent autant pour le front-end que le back-end.</p>
-                <div class="flex justify-center">
-                  <a href="#contact-form">
-                    <button class="border border-white text-white bg-primary px-4 py-2 rounded relative overflow-hidden transition-transform duration-300 hover:scale-105">
-                      Contact
-                      <!-- Effet de survol -->
-                      <div class="absolute inset-0  opacity-25 transform scale-150"></div>
-                    </button>
-                  </a>
-                </div>
+                  <div class="flex justify-end"> <!-- Utilisation de justify-end pour aligner à droite -->
+                      <a href="#contact-form">
+                          <button class="border border-white text-white bg-primary px-4 py-2 rounded relative overflow-hidden transition-transform duration-300 hover:scale-105">
+                              Contact
+                              <div class="absolute inset-0 opacity-25 transform scale-150"></div>
+                          </button>
+                      </a>
+                  </div>
             </div>
             <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-16">
-              <div class="flex justify-center text-center ">
-                <SofianePhoto class="flex justify-center items-center rounded-full z-10" alt="Sofiane-Mouadeb_photo"/>
-              </div>
+                <div class="flex justify-center text-center">
+                    <!-- Augmentation de la taille de la photo en ajustant les classes Tailwind CSS -->
+                    <SofianePhoto class="h-48 w-48 lg:h-64 lg:w-64 flex justify-center items-center rounded-full z-10" alt="Sofiane-Mouadeb_photo"/> <!-- Utilisez les classes h-48 et w-48 pour définir une taille de 48x48 et ajustez selon vos préférences -->
+                </div>
             </div>
+
 
 
         </div>
         <IconDev class="h-96 w-96 mr-3 ml-5"/>
           <h2 :class="{ 'text-secondary': isDarkMode }" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"style="font-family: 'Viga'">Qui suis-je ?</h2>
-          <div>
-            3 cards sur moi 
-          </div>
 
         <div>
           <div :class="{ 'text-secondary': isDarkMode }">
@@ -217,12 +213,15 @@
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6-4 ">
             <AfficheCard v-for="projet in tableauprojets" v-bind="projet" />
           </div>
-          <RouterLink to="/projets">
-            <button class="border border-white text-white bg-primary px-4 py-2 rounded relative overflow-hidden transition-transform duration-300 hover:scale-105">
+          <RouterLink  to="/projets">
+            <a :class="{ 'text-primary': !isDarkMode }" id="btn1" style="font-family: Viga;">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
               Voir mes projets
-              <!-- Effet de survol -->
               <div class="absolute inset-0  opacity-25 transform scale-150"></div>
-            </button>
+            </a>
           </RouterLink>
         </div>
       </div>
@@ -230,10 +229,116 @@
       <div id="contact-form">
         <Contact />
       </div>
+      
     </div>            
 </template>
 
 <style>
+#btn1 {
+    position: relative;
+    display: flex;
+    padding: 25px 30px;
+    margin: auto;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    width: 350px;
+    justify-content: center;
+    background: linear-gradient(135deg, #5aaa05, #821dda 31%, #3f0198 69%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: linear-gradient(135deg, #5aaa05, #821dda 31%, #3f0198 69%);
+}
+
+#btn1:hover {
+    transform: scale(.95);
+    box-shadow: 0 1px 4px -1px var(--shadow);
+}
+
+#btn1 span {
+    position: absolute;
+    display: block;
+}
+
+#btn1 span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #5caa0a, #5e79e3 31%, #0818ff 69%);
+    animation: animate1 1s linear infinite;
+}
+
+#btn1 span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #5caa0a, #5e79e3 31%, #0818ff 69%);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+#btn1 span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #5caa0a, #5e79e3 31%, #0818ff 69%);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+
+#btn1 span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #5caa0a, #5e79e3 31%, #0818ff 69%);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes animate1 {
+    0% {
+        left: -100%;
+    }
+    50%, 100% {
+        left: 100%;
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+    50%, 100% {
+        top: 100%;
+    }
+}
+
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+    50%, 100% {
+        right: 100%;
+    }
+}
+
+@keyframes animate4 {
+    0% {
+        bottom: -100%;
+    }
+    50%, 100% {
+        bottom: 100%;
+    }
+}
+
+
+
 button {
   position: relative;
   overflow: hidden;
@@ -243,16 +348,7 @@ button {
 button:hover > div {
   transform: scale(2); /* Fait apparaître l'effet de survol */
 }
-@keyframes progress {
-    0% {
-        width: 0%;
-        border-radius: 0;
-    }
-    100% {
-        width: 98%;
-        border-radius: 9999px;
-    }
-}
+
 
 @keyframes davinci {
     0% {
