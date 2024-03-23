@@ -5,7 +5,7 @@ import AfficheCard from '@/components/AfficheCard.vue';
 import IconSun from '@/components/icon/IconSun.vue';
 import IconMoon from '@/components/icon/IconMoon.vue';
 
-const isDarkMode = ref(false);
+const isDarkMode = ref(true);
 
 const toggleDarkMode = () => {
   isDarkMode.value = !isDarkMode.value;

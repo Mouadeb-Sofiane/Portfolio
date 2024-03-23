@@ -6,7 +6,7 @@
     import { ref } from "vue";
     const route = useRoute("/projets/[id]")
 
-    const isDarkMode = ref(false);
+    const isDarkMode = ref(true);
 
     const toggleDarkMode = () => {
       isDarkMode.value = !isDarkMode.value;

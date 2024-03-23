@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import { ref } from 'vue';
+  import Contact from './Contact.vue';
   import IconSun from './icon/IconSun.vue';
   import IconMoon from './icon/IconMoon.vue';
   import { onMounted } from 'vue';
@@ -20,8 +21,11 @@
   import IconSupabase from './icon/IconSupabase.vue';
   import SofianePhoto from './icon/SofianePhoto.vue';
   import IconDev from './icon/IconDev.vue';
+  import AfficheCard from './AfficheCard.vue';
+  import { supabase } from '@/supabase';
+  
 
-  const isDarkMode = ref(false);
+  const isDarkMode = ref(true);
 
   const toggleDarkMode = () => {
     isDarkMode.value = !isDarkMode.value;
@@ -32,6 +36,10 @@
     }
   };
 
+  let {data: tableauprojets, error} = await supabase
+  .from('Card')
+  .select('*');
+  
   onMounted(() => {
     const textContainer = document.getElementById('text-container');
     const imageContainer = document.getElementById('image-container');
@@ -58,12 +66,12 @@
                     <h2 :class="{ 'text-secondary': isDarkMode }" class="title-font sm:text-2xl mt-5 md:ml-2 lg:ml-2 text-xl mb-4 font-medium" style="font-family: 'Viga'">Developpeur Web backend et frontend</h2>
                 
 
-                <p class="mb-8 md:ml-2 lg:ml-2 leading-relaxed text-justify font-semibold" :class="{ 'text-secondary': isDarkMode, 'text-primary': !isDarkMode }" style="font-family: 'Inter'">Je suis actuellement étudiant au BUT MMI de Montbéliard.
+                <p class="mb-8 md:ml-2 lg:ml-2 leading-relaxed text-justify font-semibold" :class="{ 'text-secondary': isDarkMode, 'text-primary': !isDarkMode }" style="font-family: 'Poppins'">Je suis actuellement étudiant au BUT MMI de Montbéliard.
                   Je souhaite devenir un développeur web full stack polyvalent.
                   Je suis polyvalent autant pour le front-end que le back-end.</p>
                 <div class="flex justify-center">
                     <button
-                        class="inline-flex md:ml-2 lg:ml-2 text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">Contact</button>
+                        class="inline-flex md:ml-2 lg:ml-2 text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg" style="font-family: 'Viga'">Contact</button>
                 </div>
             </div>
             <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-16">
@@ -75,18 +83,18 @@
 
         </div>
         <IconDev class="h-96 w-96 mr-3 ml-5"/>
-          <h2 :class="{ 'text-secondary': isDarkMode }" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">Qui suis-je ?</h2>
+          <h2 :class="{ 'text-secondary': isDarkMode }" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"style="font-family: 'Viga'">Qui suis-je ?</h2>
           <div>
             3 cards sur moi 
           </div>
 
         <div>
           <div :class="{ 'text-secondary': isDarkMode }">
-            <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4">Mes Compétences</h2>
+            <h2 :class="{ 'text-secondary': isDarkMode }" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"style="font-family: 'Viga'">Mes compétences</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10 mr-8 ml-8">
-              <div class="rounded-lg p-6 shadow-md" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-fourth': isDarkMode }">
+              <div class="rounded-lg p-6 shadow-md" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-gray-700': isDarkMode }">
                   <div class="flex items-center mb-2">
-                      <p class="text-lg sm:text-l md:text-xl lg:text-2xl xl:text-3xl mb-6">Développement Web</p>
+                      <p class="text-lg sm:text-l md:text-xl lg:text-2xl xl:text-3xl mb-6" style="font-family: 'Viga'">Développement Web</p>
                   </div>
                   <div class="flex">
                     <IconHtml class="h-6 w-6 mr-3"/>
@@ -138,9 +146,9 @@
                   </div>
               </div>
 
-              <div class="rounded-lg p-6 shadow-md" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-fourth': isDarkMode }">
+              <div class="rounded-lg p-6 shadow-md" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-gray-700': isDarkMode }">
                   <div class="flex items-center mb-2">
-                      <p class="text-lg sm:text-l md:text-xl lg:text-2xl xl:text-3xl mb-6">Design</p>
+                      <p class="text-lg sm:text-l md:text-xl lg:text-2xl xl:text-3xl mb-6" style="font-family: 'Viga'">Design</p>
                   </div>
                   <div class="flex">
                     <IconFigma class="h-8 w-8 mr-3 ml-5"/>
@@ -162,9 +170,9 @@
                   </div>
               </div>
 
-              <div class="rounded-lg p-6 shadow-md" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-fourth': isDarkMode }">
+              <div class="rounded-lg p-6 shadow-md" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-gray-700': isDarkMode }">
                 <div class="flex items-center mb-2">
-                    <p class="text-lg sm:text-l md:text-xl lg:text-2xl xl:text-3xl mb-6">Communication</p>
+                    <p class="text-lg sm:text-l md:text-xl lg:text-2xl xl:text-3xl mb-6" style="font-family: 'Viga'">Communication</p>
                 </div>
                   <div class="flex">
                     <IconDrive class="h-8 w-8 mr-3 ml-5" />
@@ -187,9 +195,9 @@
             </div>
           </div>
 
-          <div class="rounded-lg p-6 shadow-md relative mb-8 mr-8 ml-8" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-fourth': isDarkMode }">
+          <div class="rounded-lg p-6 shadow-md relative mb-8 mr-8 ml-8" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-gray-700': isDarkMode }">
               <div class="flex items-center">
-                <p class="text-lg sm:text-l md:text-xl lg:text-2xl xl:text-3xl mb-6">Audiovisuel</p>
+                <p class="text-lg sm:text-l md:text-xl lg:text-2xl xl:text-3xl mb-6" style="font-family: 'Viga'">Audiovisuel</p>
               </div>
               <div class="flex">
                 <IconDaVinci class="h-8 w-8 mr-3 ml-5" />
@@ -198,90 +206,20 @@
                 </div>            
               </div>
           </div>
-          
-          <p>gthyujikol</p>
+          <h2 :class="{ 'text-secondary': isDarkMode }" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"style="font-family: 'Viga'">Mes projets</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6-4 ">
+            <AfficheCard v-for="projet in tableauprojets" v-bind="projet" />
           </div>
-          </div>
+          <RouterLink to="/projets">
+            <button class="border border-white text-white bg-primary px-4 py-2 rounded  transition-colors duration-300">Voir mes projets</button>
+          </RouterLink>
         </div>
-        <div class="h-96 border border-solid border-green-600 max-w-72 rounded-lg" style="background-color: rgba(255,0,0,0.7)">
-          <img class="w-full"  src="../assets/img/photo1.png" alt="">
-          <img src="../assets/img/SM.png" class="h-10" alt="">
-        </div>
-        <br>
-        <img src="../assets/img/photo3.png" class="h-96 border border-solid border-green-600 max-w-72 rounded-lg flex items-center" style="background-color: rgba(255,0,0,0.7)"/>
-          <img src="../assets/img/SM.png" class="h-10" alt="">
-          <div class="description">
-            <div class="name">Sofiane Mouadeb</div>
-          </div>
-
-
-          <div class="card">
-            <img class="w-16" src="../assets/img/SM.png" alt="">
-            <div class="description">
-              <div class="name">Sofiane Mouadeb</div>
-              <div class="stats-container">
-                <div class="figure">
-                <div>SPEED</div>
-                <div>POWER</div>
-                <div>PACE</div>
-              </div>
-              <div class="stats-container">
-                <div class="figure">
-                <div>TACKLE</div>
-                <div>SKILL</div>
-                <div>80 PATIENCE</div>
-              </div>
-          </div>
-              </div>
-            </div>
-          </div>
+      </div>
+      <Contact />
+    </div>            
 </template>
 
 <style>
-.card {
-  height: 500px;
-  border: 1px red solid;
-  max-width: 350px;
-  width: 100%;
-  background: url(../assets/img/photo3.png), rgba(255,0,0,0.7);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: gold;
-  font-family: 'Viga';
-  box-shadow: 10px 10px 5px rgba(255,0,0,0.5)
-}
-
-.description {
-  height: 200px;
-  background: rgba(255,0,0,0.5);
-}
-
-.name {
-  background: rgba(255,0,0,1);
-  font-size: 30px;
-  text-align: center;
-}
-
-.stats-container {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  height: inherit;
-  gap: 20px;
-}
-
-.figure {
-  display: flex;
-  width: 100%;
-  gap:20px;
-  flex-direction: column;
-  font-size: large;
-  align-items: center;
-  height: inherit;
-  font-weight: 600;
-}
 
 @keyframes progress {
     0% {
@@ -365,12 +303,17 @@
 
 
 
-    @font-face {
+@font-face {
   font-family: "Viga";
   src: url("../fonts/Viga-Regular.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
-
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Regular.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 </style>

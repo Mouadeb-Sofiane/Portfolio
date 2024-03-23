@@ -15,17 +15,19 @@ defineProps <Database["public"]["Tables"]["Card"]["Row"]>()
             {{ nom_projet }}
             </h1>
             <div class="w-32 h-2 bg-green-500 rounded-full mb-5 transform translate-y-20 group-hover:translate-y-0 duration-300">
-                    <div class="w-32 h-2 bg-yellow-500 rounded-full mb-5 overflow-hidden">
-                        <div class="inset-0 bg-gradient-to-r from-blue-400 to-green-500 rounded-full group-hover:animate-slide duration-300"></div>
-                    </div>
+                <div class="w-32 h-2 bg-white rounded-full mb-5 overflow-hidden">
+                    <div class="inset-0 bg-gradient-to-r from-green-500 to-blue-400 rounded-full group-hover:animate-slide duration-300"></div>
+                </div>
             </div>
+
+
             <p class="opacity-0 text-white text-l group-hover:opacity-80 transform duration-500 text-justify">
                 {{ description_projet }}
             
             </p>
             <RouterLink :to="{name:'/projets/[id]', params:{id:id!}}">
                 <div class="opacity-0 border-white text-white text-xl group-hover:opacity-80 transform duration-500 flex justify-end mt-2 mb-2">
-                    <button type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
+                    <button type="button" class="text-black bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium text-sm px-5 py-2.5 me-2 mb-2">
                         Voir plus
                     </button>
                 </div>
@@ -37,4 +39,3 @@ defineProps <Database["public"]["Tables"]["Card"]["Row"]>()
         </article>
     </div>
 </template>
-
