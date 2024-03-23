@@ -41,13 +41,12 @@
 </script>
   
 <template>
-  <div class="flex justify-center items-center h-screen border-white">
-    <div class="bg-primary p-8 border-white rounded-lg shadow-lg max-w-md w-full">
+  <div class="flex justify-center items-center h-screen  border-white">
+    <div class="bg-gray-700 p-8 border-white rounded-lg shadow-lg max-w-md w-full">
       <h2 class="text-2xl font-bold mb-4 text-white">Formulaire de contact</h2>
       <form @submit.prevent="submitForm">
         <div class="flex">
-            <div class="mr-3 mb-4">
-            <label for="name" class="block text-gray-300 font-semibold mb-2">Nom</label>
+            <div class="mr-3 mt-4 mb-4">
             <input
                 id="name"
                 type="text"
@@ -57,8 +56,7 @@
                 class="w-full px-3 py-2 rounded border border-gray-600 focus:outline-none focus:border-blue-500"
             />
             </div>
-            <div class="ml-3 mb-4">
-            <label for="prenom" class="block text-gray-300 font-semibold mb-2">Prenom</label>
+            <div class="ml-3 mt-4 mb-4">
             <input
                 id="prenom"
                 type="text"
@@ -70,7 +68,6 @@
             </div>
         </div>
         <div class="mb-4">
-          <label for="email" class="block text-gray-300 font-semibold mb-2">Email</label>
           <input
             id="email"
             type="email"
@@ -81,7 +78,6 @@
           />
         </div>
         <div class="mb-4">
-          <label for="object" class="block text-gray-300 font-semibold mb-2">Objet de votre message</label>
           <input
             id="object"
             type="object"
@@ -92,7 +88,6 @@
           />
         </div>
         <div class="mb-6">
-          <label for="message" class="block text-gray-300 font-semibold mb-2">Message</label>
           <textarea
             id="message"
             name="message"

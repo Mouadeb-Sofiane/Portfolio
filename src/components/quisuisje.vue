@@ -89,9 +89,7 @@
         </div>
         <IconDev class="h-96 w-96 mr-3 ml-5"/>
           <h2 :class="{ 'text-secondary': isDarkMode }" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">Qui suis-je ?</h2>
-          <div>
-            3 cards sur moi 
-          </div>
+          
 
           <div class="container1">
               <div class="card1">
@@ -100,8 +98,13 @@
                 </div>  
               </div>
             </div>
-
-          </div>
+            <div>
+              <p>Je suis Sofiane Mouadeb, un étudiant passionné et dévoué du BUT MMI (Métiers du Multimédia et de l’Internet) de Montbéliard, spécialisé dans le développement web. Ayant suivi un parcours enrichissant en BAC général, j'ai acquis une solide base dans les technologies et les principes du développement web grâce à des matières telles que la NSI et les Mathématiques.
+                 Mon intérêt pour le développement web s'est pleinement manifesté au cours de mes études au BUT MMI, où j'ai décidé de me spécialiser dans cette branche dynamique et en constante évolution. À seulement 19 ans, je m'immerge totalement dans ce domaine, toujours à la recherche de nouvelles connaissances et compétences.
+                 Ma curiosité et ma soif d'apprendre m'ont poussé à explorer différents aspects du développement web, de la programmation front-end à la conception back-end, en passant par l'optimisation de l'expérience utilisateur. Ces compétences, acquises à la fois dans le cadre académique et à travers mes projets personnels, me permettent de concevoir des solutions web innovantes et efficaces.
+              </p>
+            </div>
+            </div>
 
             
 </template>

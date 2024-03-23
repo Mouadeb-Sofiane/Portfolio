@@ -48,6 +48,8 @@
       imageContainer?.classList.add('show');
     });
   });   
+
+  
 </script>
 
 <template>
@@ -70,8 +72,13 @@
                   Je souhaite devenir un développeur web full stack polyvalent.
                   Je suis polyvalent autant pour le front-end que le back-end.</p>
                 <div class="flex justify-center">
-                    <button
-                        class="inline-flex md:ml-2 lg:ml-2 text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg" style="font-family: 'Viga'">Contact</button>
+                  <a href="#contact-form">
+                    <button class="border border-white text-white bg-primary px-4 py-2 rounded relative overflow-hidden transition-transform duration-300 hover:scale-105">
+                      Contact
+                      <!-- Effet de survol -->
+                      <div class="absolute inset-0  opacity-25 transform scale-150"></div>
+                    </button>
+                  </a>
                 </div>
             </div>
             <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-16">
@@ -211,16 +218,31 @@
             <AfficheCard v-for="projet in tableauprojets" v-bind="projet" />
           </div>
           <RouterLink to="/projets">
-            <button class="border border-white text-white bg-primary px-4 py-2 rounded  transition-colors duration-300">Voir mes projets</button>
+            <button class="border border-white text-white bg-primary px-4 py-2 rounded relative overflow-hidden transition-transform duration-300 hover:scale-105">
+              Voir mes projets
+              <!-- Effet de survol -->
+              <div class="absolute inset-0  opacity-25 transform scale-150"></div>
+            </button>
           </RouterLink>
         </div>
       </div>
-      <Contact />
+      <h2 :class="{ 'text-secondary': isDarkMode }" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"style="font-family: 'Viga'">Contact</h2>
+      <div id="contact-form">
+        <Contact />
+      </div>
     </div>            
 </template>
 
 <style>
+button {
+  position: relative;
+  overflow: hidden;
+}
 
+/* Style pour l'effet de survol */
+button:hover > div {
+  transform: scale(2); /* Fait apparaître l'effet de survol */
+}
 @keyframes progress {
     0% {
         width: 0%;
