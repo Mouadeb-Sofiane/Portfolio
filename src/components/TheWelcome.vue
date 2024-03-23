@@ -71,7 +71,7 @@
                   Je suis polyvalent autant pour le front-end que le back-end.</p>
                   <div class="flex justify-end"> <!-- Utilisation de justify-end pour aligner à droite -->
                       <a href="#contact-form">
-                          <button class="border border-white text-white bg-primary px-4 py-2 rounded relative overflow-hidden transition-transform duration-300 hover:scale-105">
+                          <button class="border mb-20 border-white text-white bg-primary px-4 py-2 rounded relative overflow-hidden transition-transform duration-300 hover:scale-105">
                               Contact
                               <div class="absolute inset-0 opacity-25 transform scale-150"></div>
                           </button>
@@ -84,11 +84,7 @@
                     <SofianePhoto class="h-48 w-48 lg:h-64 lg:w-64 flex justify-center items-center rounded-full z-10" alt="Sofiane-Mouadeb_photo"/> <!-- Utilisez les classes h-48 et w-48 pour définir une taille de 48x48 et ajustez selon vos préférences -->
                 </div>
             </div>
-
-
-
         </div>
-        <IconDev class="h-96 w-96 mr-3 ml-5"/>
           <h2 :class="{ 'text-secondary': isDarkMode }" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"style="font-family: 'Viga'">Qui suis-je ?</h2>
 
         <div>
@@ -349,6 +345,16 @@ button:hover > div {
   transform: scale(2); /* Fait apparaître l'effet de survol */
 }
 
+@keyframes progress {
+    0% {
+        width: 0%;
+        border-radius: 0;
+    }
+    100% {
+        width: 95%;
+        border-radius: 9999px; /* Utilisez une valeur suffisamment grande pour obtenir un coin très arrondi */
+    }
+}
 
 @keyframes davinci {
     0% {
@@ -393,29 +399,31 @@ button:hover > div {
         border-radius: 9999px; /* Utilisez une valeur suffisamment grande pour obtenir un coin très arrondi */
     }
 }
-
+.animate-progress {
+    animation: progress 9s ease forwards; /* Réglez la durée et le timing de l'animation selon vos préférences */
+}
 .animate-neuf {
-    animation: neuf 3s ease forwards; /* Réglez la durée et le timing de l'animation selon vos préférences */
+    animation: neuf 9s ease forwards; /* Réglez la durée et le timing de l'animation selon vos préférences */
 }
 
 .animate-six {
-    animation: six 3s ease forwards; /* Réglez la durée et le timing de l'animation selon vos préférences */
+    animation: six 9s ease forwards; /* Réglez la durée et le timing de l'animation selon vos préférences */
 }
 
 .animate-septcinq {
-    animation: septcinq 3s ease forwards; /* Réglez la durée et le timing de l'animation selon vos préférences */
+    animation: septcinq 9s ease forwards; /* Réglez la durée et le timing de l'animation selon vos préférences */
 }
 
 .animate-davinci {
-    animation: davinci 3s ease forwards; /* Réglez la durée et le timing de l'animation selon vos préférences */
+    animation: davinci 9s ease forwards; /* Réglez la durée et le timing de l'animation selon vos préférences */
 }
 
 .animate-progress {
-    animation: progress 3s ease forwards;
+    animation: progress 9s ease forwards;
 }
 
 .animate-progress1 {
-    animation: progress 3s ease forwards;
+    animation: progress 9s ease forwards;
 }
 
 
