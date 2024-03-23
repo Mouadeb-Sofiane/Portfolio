@@ -203,9 +203,86 @@
           </div>
           </div>
         </div>
+        <div class="h-96 border border-solid border-green-600 max-w-72 rounded-lg" style="background-color: rgba(255,0,0,0.7)">
+          <img class="w-full"  src="../assets/img/photo1.png" alt="">
+          <img src="../assets/img/SM.png" class="h-10" alt="">
+        </div>
+        <br>
+        <img src="../assets/img/photo3.png" class="h-96 border border-solid border-green-600 max-w-72 rounded-lg flex items-center" style="background-color: rgba(255,0,0,0.7)"/>
+          <img src="../assets/img/SM.png" class="h-10" alt="">
+          <div class="description">
+            <div class="name">Sofiane Mouadeb</div>
+          </div>
+
+
+          <div class="card">
+            <img class="w-16" src="../assets/img/SM.png" alt="">
+            <div class="description">
+              <div class="name">Sofiane Mouadeb</div>
+              <div class="stats-container">
+                <div class="figure">
+                <div>SPEED</div>
+                <div>POWER</div>
+                <div>PACE</div>
+              </div>
+              <div class="stats-container">
+                <div class="figure">
+                <div>TACKLE</div>
+                <div>SKILL</div>
+                <div>80 PATIENCE</div>
+              </div>
+          </div>
+              </div>
+            </div>
+          </div>
 </template>
 
 <style>
+.card {
+  height: 500px;
+  border: 1px red solid;
+  max-width: 350px;
+  width: 100%;
+  background: url(../assets/img/photo3.png), rgba(255,0,0,0.7);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: gold;
+  font-family: 'Viga';
+  box-shadow: 10px 10px 5px rgba(255,0,0,0.5)
+}
+
+.description {
+  height: 200px;
+  background: rgba(255,0,0,0.5);
+}
+
+.name {
+  background: rgba(255,0,0,1);
+  font-size: 30px;
+  text-align: center;
+}
+
+.stats-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: inherit;
+  gap: 20px;
+}
+
+.figure {
+  display: flex;
+  width: 100%;
+  gap:20px;
+  flex-direction: column;
+  font-size: large;
+  align-items: center;
+  height: inherit;
+  font-weight: 600;
+}
+
 @keyframes progress {
     0% {
         width: 0%;
@@ -294,4 +371,6 @@
   font-weight: normal;
   font-style: normal;
 }
+
+
 </style>
