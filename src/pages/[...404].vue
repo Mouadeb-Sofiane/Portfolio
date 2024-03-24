@@ -13,7 +13,6 @@ import { ref, onMounted } from 'vue'
 </div>
 </template>
 <style>
-@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 body {
   display: flex;
   justify-content: center;
