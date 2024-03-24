@@ -40,16 +40,11 @@ const modules = [Autoplay, Pagination, Navigation];
 
 <template>
   <div class="p-2">
-    <div class=" pb-10 text-center bg-cover bg-center h-screen flex flex-col justify-center items-center" style="background-image: url(votre-image.jpg);">
-      <h1 class="text-3xl font-bold" style="font-family: 'Viga'">{{ nom_projet }}</h1>
-        <div class="">
-            <img class="w-max" :src="image_projet" alt="Image projet" />
-            <img class="w-auto h-24" :src="logo" alt="Image projet" />
-        </div>
-    </div>
+    <div class="text-center flex flex-col justify-center mb-16 items-center mt-12">
+      <h1 class="text-4xl font-bold" style="font-family: 'Viga'">{{ nom_projet }}</h1>
+      </div>  
 
-
-    <h2 class="text-2xl underline mb-5" style="font-family: 'Viga'">{{ title1 }}</h2>
+    <h2 class="text-2xl underline mb-7" style="font-family: 'Viga'">{{ title1 }}</h2>
     <div class="flex flex-col md:flex-row gap-11">
       <!-- Description prenant 60% de l'espace sur les petits écrans et 3/5 sur les grands écrans -->
       <p class="text-justify w-full md:w-3/5" style="font-family: 'Poppins'">{{ description1 }}</p>
@@ -59,8 +54,8 @@ const modules = [Autoplay, Pagination, Navigation];
         <img class="w-full" :src="img2" alt="Image projet" />
       </div>
     </div>
-
-    <h2 class="text-2xl underline mb-5" style="font-family: 'Viga'">{{ title2 }}</h2>
+    <div class="mt-20"></div>
+    <h2 class="text-2xl underline mb-7" style="font-family: 'Viga'">{{ title2 }}</h2>
     <div class="flex flex-col md:flex-row gap-11">
       <!-- Images prenant 40% de l'espace sur les petits écrans et 2/5 sur les grands écrans -->
       <div class="flex flex-col w-full md:w-2/5">
@@ -72,8 +67,8 @@ const modules = [Autoplay, Pagination, Navigation];
         <p style="font-family: 'Poppins'">{{ description2b }}</p>
       </div>
     </div>
-
-    <h2 class="text-2xl underline mb-5" style="font-family: 'Viga'">{{ title3 }}</h2>
+    <div class="mt-20"></div>
+    <h2 class="text-2xl underline mb-5 text-center" style="font-family: 'Viga'">{{ title3 }}</h2>
     <br />
     <div>
       <swiper
@@ -104,11 +99,11 @@ const modules = [Autoplay, Pagination, Navigation];
         </template>
       </swiper>
     </div>
- 
+ <div class=mt-20></div>
     <div class="flex flex-col md:flex-row gap-11">
     <!-- Partie gauche avec l'iframe -->
     <div class="w-full md:w-2/3">
-        <h2 class="text-2xl underline mb-5" style="font-family: 'Viga'">{{ title4 }}</h2>
+        <h2 class="text-2xl underline mb-10" style="font-family: 'Viga'">{{ title4 }}</h2>
         <div class="aspect-w-16 aspect-h-9 h-full w-full">
             <iframe class="h-full w-full" style="border: 1px solid rgba(0, 0, 0, 0.1);" :src="maquette" allowfullscreen></iframe>
         </div>
@@ -134,12 +129,12 @@ const modules = [Autoplay, Pagination, Navigation];
 </div>
 
           
-      <div class="flex justify-center mt-20">
+  <div class="flex justify-center mt-32 mb-10">
     <button class="border border-white text-white bg-primary px-4 py-2 rounded relative overflow-hidden transition-transform duration-300 hover:scale-105">
         <a :href="lien_projet">Accéder au site</a>
         <div class="absolute inset-0 opacity-25 transform scale-150"></div>
     </button>
-</div>
+  </div>
 
         
 

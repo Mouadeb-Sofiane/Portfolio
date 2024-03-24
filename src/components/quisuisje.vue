@@ -59,8 +59,12 @@
                   Je souhaite devenir un développeur web full stack polyvalent.
                   Je suis polyvalent autant pour le front-end que le back-end.</p>
                 <div class="flex justify-center">
-                    <button
-                        class="inline-flex md:ml-2 lg:ml-2 text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded text-lg" style="font-family: 'Viga'">Contact</button>
+                  <a href="#monparcourscolaire">
+                          <button class="border mb-20 border-white text-white bg-primary px-4 py-2 rounded relative overflow-hidden transition-transform duration-300 hover:scale-105">
+                              Mon parcours scolaire
+                              <div class="absolute inset-0 opacity-25 transform scale-150"></div>
+                          </button>
+                      </a>
                 </div>
             </div>
             
@@ -88,10 +92,10 @@
             </div>
         </div>
         <IconDev class="h-96 w-96 mr-3 ml-5 "/>
-          <h2 :class="{ 'text-secondary': isDarkMode }" style="font-family: 'Viga'" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">Mes centres d'intérêts</h2>
+          <h2 :class="{ 'text-secondary': isDarkMode }" style="font-family: 'Viga'" class="text-2xl mb-7 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">Mes centres d'intérêts</h2>
           
           <div class="flex flex-col md:flex-row justify-center md:justify-between">
-            <div class="container1 md:mr-8">
+            <div class="container1 mb-20 md:mr-8">
               <div class="card1">
                 <div class="content-card1">
                   <Cardfut />
@@ -99,23 +103,23 @@
               </div>
             </div>
 
-            <div class="w-full mb-10 md:w-2/3">
-              <p class="text-secondary mb-3 md:mb-0 md:pr-8 text-justify" style="font-family: 'Poppins'">
+            <div :class="{ 'text-secondary': isDarkMode }" class="w-full mt-7 mb-10 md:w-2/3">
+              <p class="mb-3 md:mb-0 md:pr-8 text-justify" style="font-family: 'Poppins'">
                 Je suis Sofiane Mouadeb, un étudiant passionné du BUT MMI (Métiers du Multimédia et de l’Internet) de Montbéliard, spécialisé dans le développement web, la communication et le design. Ayant suivi un parcours enrichissant en BAC général, j'ai acquis une solide base dans les technologies et les principes du développement web grâce à des matières telles que la NSI et les Mathématiques qui ont été deux de mes trois spécialités, avec la science économique et sociale. Mon intérêt pour le développement web s'est pleinement manifesté dès mes études au lycée Edouard Belin à Vesoul, notamment lors des cours de NSI. C'est à ce moment que j'ai décidé de me spécialiser dans cette branche dynamique et en constante évolution en poursuivant mes études au BUT MMI à Montbéliard.
               </p>             
               <br>                  
-              <p class="text-secondary mb-3 md:mb-0 md:pr-8 text-justify" style="font-family: 'Poppins'">
+              <p class="mb-3 md:mb-0 md:pr-8 text-justify" style="font-family: 'Poppins'">
                 À l'âge de 19 ans, je m'immerge totalement dans ce domaine, toujours avide de nouvelles connaissances et compétences. En parallèle de mes études, je suis également passionné de sport, notamment le football, le vélo et la boxe. Le football, en particulier, a toujours été une passion pour moi depuis mon enfance jusqu'à maintenant, jouant un rôle important dans ma vie.
               </p>
               <br>
-              <p class="text-secondary mb-3 md:mb-0 md:pr-8 text-justify" style="font-family: 'Poppins'">
+              <p class="mb-3 md:mb-0 md:pr-8 text-justify" style="font-family: 'Poppins'">
                 Ma curiosité naturelle m'a poussé à explorer différents aspects du développement web, de la programmation front-end à la conception back-end, en passant par l'optimisation de l'expérience utilisateur. Ces compétences, acquises à la fois dans le cadre académique et à travers mes projets personnels, me permettent de concevoir des solutions web innovantes et efficaces, tout en gardant un équilibre entre mes passions pour le sport et ma carrière dans le domaine du multimédia et de l'internet.
               </p>
             </div>
           </div>
 
 
-          <h2 :class="{ 'text-secondary': isDarkMode }" style="font-family: 'Viga'" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">Mon parcours scolaire</h2>
+          <h2 id="monparcourscolaire" :class="{ 'text-secondary': isDarkMode }" style="font-family: 'Viga'" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">Mon parcours scolaire</h2>
               <div class="min-h-screen py-6 flex flex-col justify-center sm:py-12">
                 <div class="py-3 sm:max-w-xl sm:mx-auto w-full px-2 sm:px-0">
                   <div class="relative text-gray-700 antialiased text-sm font-semibold">

@@ -47,7 +47,19 @@
     textContainer?.addEventListener('animationend', () => {
       imageContainer?.classList.add('show');
     });
-  });   
+  });  
+  
+  const downloadCV = () => {
+  // Lien vers votre CV
+  const cvURL = "https://drive.google.com/file/d/1eSmQyN_FIif6AOCcX6SvwIc5otw1MvxP/view?usp=sharing";
+  // Créer un élément <a> et lui attribuer le lien de téléchargement
+  const link = document.createElement('a');
+  link.href = cvURL;
+  link.download = 'SofianeMouadeb-CV.pdf';
+
+  // Simuler un clic sur le lien
+  link.click();
+};
 </script>
 
 <template>
@@ -69,6 +81,7 @@
                 <p class="mb-8 md:ml-2 lg:ml-2 leading-relaxed text-justify font-semibold mt-4" :class="{ 'text-secondary': isDarkMode, 'text-primary': !isDarkMode }" style="font-family: 'Poppins'">Je suis actuellement étudiant au BUT MMI de Montbéliard.
                   Je souhaite devenir un développeur web full stack polyvalent.
                   Je suis polyvalent autant pour le front-end que le back-end.</p>
+                  <div class="flex gap-14">
                   <div class="flex justify-end"> <!-- Utilisation de justify-end pour aligner à droite -->
                       <a href="#contact-form">
                           <button class="border mb-20 border-white text-white bg-primary px-4 py-2 rounded relative overflow-hidden transition-transform duration-300 hover:scale-105">
@@ -77,6 +90,11 @@
                           </button>
                       </a>
                   </div>
+                  <button @click="downloadCV" class="border mb-20 border-primary text-primary bg-gray-100 px-4 py-2 rounded relative overflow-hidden transition-transform duration-300 hover:scale-105">
+                    Télécharger mon CV
+                    <div class="absolute inset-0 opacity-25 transform scale-150"></div>
+                  </button>
+                </div>
             </div>
             <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-16">
                 <div class="flex justify-center text-center">

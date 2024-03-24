@@ -30,8 +30,8 @@ let {data: tableauprojet, error} = await supabase
             
     <div :class="{ 'dark': isDarkMode, 'bg-gray-100': !isDarkMode, 'bg-primary': isDarkMode }" class="min-h-screen">
       
-      <h2 :class="{ 'text-secondary': isDarkMode }" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"style="font-family: 'Viga'">Mes projets</h2>
-        <p :class="{ 'text-secondary': isDarkMode, 'text-primary': !isDarkMode }" class="mb-20 mt-10 ml-6 mr-6" style="font-family: 'Poppins';">En MMI, nous avons réalisés beaucoup de projets qui ont aboutis. 
+      <h2 :class="{ 'text-secondary': isDarkMode }" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl ml-6"style="font-family: 'Viga'">Mes projets</h2>
+        <p :class="{ 'text-secondary': isDarkMode, 'text-primary': !isDarkMode }" class="mb-20 mt-10 ml-24 mr-24" style="font-family: 'Poppins';">En MMI, nous avons réalisés beaucoup de projets qui ont aboutis. 
                                                                                       Il y a ici une liste de sites que j'ai réalisés seul ou en équipe. 
                                                                                       Je vous invite à les découvrir. Voici une liste de mes projets qui continuera de s'angrandir.
                                                                                       Il y aura par la suite les projets que j'ai fais hors du BUT dans une prochaine mise à jour.</p>

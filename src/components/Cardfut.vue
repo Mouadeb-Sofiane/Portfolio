@@ -12,22 +12,20 @@
                             <div class="name" >Sofiane Mouadeb</div>
                             <div class="stats-container">
                                 <div class="figure">
-                                    <div>75 DESIGN</div>
-                                    <div>95 BACKEND</div>
-                                    <div>89 FRONTEND</div>
-
+                                    <div>87 VELO</div>
+                                    <div>82 BOXE</div>
+                                    <div>99 FOOTBALL</div>
                                 </div>
                                 <div class="figure">
-                                    <div>70 SEO</div>
-                                    <div>82 UX DESIGN</div>
-                                    <div>85 AUDIOVISUEL</div>
+                                    <div>70 DESSIN</div>
+                                    <div>89 MANGA</div>
+                                    <div>95 INFORMATIQUE</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        
   </template>
   
   <style>
