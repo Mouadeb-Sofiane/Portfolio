@@ -84,13 +84,13 @@
                   <div class="flex gap-14">
                   <div class="flex justify-end"> <!-- Utilisation de justify-end pour aligner à droite -->
                       <a href="#contact-form">
-                          <button class="border mb-20 border-white text-white bg-primary px-4 py-2 rounded relative overflow-hidden transition-transform duration-300 hover:scale-105">
+                          <button style="font-family: 'Viga'" class="border mb-20 border-white text-white bg-primary px-4 py-2 rounded relative overflow-hidden transition-transform duration-300 hover:scale-105">
                               Contact
                               <div class="absolute inset-0 opacity-25 transform scale-150"></div>
                           </button>
                       </a>
                   </div>
-                  <button @click="downloadCV" class="border mb-20 border-primary text-primary bg-gray-100 px-4 py-2 rounded relative overflow-hidden transition-transform duration-300 hover:scale-105">
+                  <button @click="downloadCV" style="font-family: 'Viga'" class="border mb-20 border-primary text-primary bg-gray-100 px-4 py-2 rounded relative overflow-hidden transition-transform duration-300 hover:scale-105">
                     Télécharger mon CV
                     <div class="absolute inset-0 opacity-25 transform scale-150"></div>
                   </button>
@@ -260,10 +260,9 @@
     overflow: hidden;
     width: 350px;
     justify-content: center;
-    background: linear-gradient(135deg, #5aaa05, #821dda 31%, #3f0198 69%);
     background-clip: text;
     -webkit-background-clip: text;
-    color: linear-gradient(135deg, #5aaa05, #821dda 31%, #3f0198 69%);
+    color: linear-gradient(135deg, #00d9ff, #001aff 31%, #2f00ff 69%);
 }
 
 #btn1:hover {
@@ -281,7 +280,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #5caa0a, #5e79e3 31%, #0818ff 69%);
+    background: linear-gradient(90deg, transparent,  #00d9ff, #001aff 31%, #2f00ff 69%);
     animation: animate1 1s linear infinite;
 }
 
@@ -290,9 +289,9 @@
     right: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(180deg, transparent, #5caa0a, #5e79e3 31%, #0818ff 69%);
+    background: linear-gradient(180deg, transparent,  #00d9ff, #001aff 31%, #2f00ff 69%);
     animation: animate2 1s linear infinite;
-    animation-delay: 0.25s;
+    animation-delay: 1s;
 }
 
 #btn1 span:nth-child(3) {
@@ -300,9 +299,9 @@
     right: 0;
     width: 100%;
     height: 2px;
-    background: linear-gradient(270deg, transparent, #5caa0a, #5e79e3 31%, #0818ff 69%);
+    background: linear-gradient(270deg, transparent,  #00d9ff, #001aff 31%, #2f00ff 69%);
     animation: animate3 1s linear infinite;
-    animation-delay: 0.50s;
+    animation-delay: 1s;
 }
 
 #btn1 span:nth-child(4) {
@@ -310,9 +309,9 @@
     left: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(360deg, transparent, #5caa0a, #5e79e3 31%, #0818ff 69%);
+    background: linear-gradient(360deg, transparent,  #00d9ff, #001aff 31%, #2f00ff 69%);
     animation: animate4 1s linear infinite;
-    animation-delay: 0.75s;
+    animation-delay: 1s;
 }
 
 @keyframes animate1 {
