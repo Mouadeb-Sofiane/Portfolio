@@ -103,11 +103,11 @@
                 </div>
             </div>
         </div>
-          <h2 :class="{ 'text-secondary': isDarkMode }" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"style="font-family: 'Viga'">Qui suis-je ?</h2>
+          <h2 :class="{ 'text-secondary': isDarkMode }" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-10 xl:text-6xl"style="font-family: 'Viga'">Qui suis-je ?</h2>
 
         <div>
           <div :class="{ 'text-secondary': isDarkMode }">
-            <h2 :class="{ 'text-secondary': isDarkMode }" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"style="font-family: 'Viga'">Mes compétences</h2>
+            <h2 :class="{ 'text-secondary': isDarkMode }" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-24 mb-10 xl:text-6xl"style="font-family: 'Viga'">Mes compétences</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10 mr-8 ml-8">
               <div class="rounded-lg p-6 shadow-md" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-gray-700': isDarkMode }">
                   <div class="flex items-center mb-2">
@@ -223,11 +223,11 @@
                 </div>            
               </div>
           </div>
-          <h2 :class="{ 'text-secondary': isDarkMode }" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"style="font-family: 'Viga'">Mes projets</h2>
+          <h2 :class="{ 'text-secondary': isDarkMode }" class="text-2xl sm:text-3xl mb-10 mt-24 md:text-4xl lg:text-5xl xl:text-6xl"style="font-family: 'Viga'">Mes projets</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6-4 ">
             <AfficheCard v-for="projet in tableauprojets" v-bind="projet" />
           </div>
-          <RouterLink  to="/projets">
+          <RouterLink to="/projets">
             <a :class="{ 'text-primary': !isDarkMode }" id="btn1" style="font-family: Viga;">
               <span></span>
               <span></span>
@@ -239,7 +239,7 @@
           </RouterLink>
         </div>
       </div>
-      <h2 :class="{ 'text-secondary': isDarkMode }" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"style="font-family: 'Viga'">Contact</h2>
+      <h2 :class="{ 'text-secondary': isDarkMode }" class="text-2xl sm:text-3xl md:text-4xl mt-20 lg:text-5xl xl:text-6xl"style="font-family: 'Viga'">Contact</h2>
       <div id="contact-form">
         <Contact />
       </div>
@@ -350,8 +350,6 @@
     }
 }
 
-
-
 button {
   position: relative;
   overflow: hidden;
@@ -443,9 +441,6 @@ button:hover > div {
     animation: progress 9s ease forwards;
 }
 
-
-
-
 @font-face {
   font-family: "Viga";
   src: url("../fonts/Viga-Regular.ttf") format("opentype");
@@ -458,5 +453,4 @@ button:hover > div {
   font-weight: normal;
   font-style: normal;
 }
-
 </style>
