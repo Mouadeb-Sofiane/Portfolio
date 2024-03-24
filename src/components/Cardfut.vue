@@ -7,7 +7,7 @@
     <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-16">
                 <div class="flex justify-center text-center ">
                     <div class="card animated-card">
-                        <img src="../assets/img/logo1.png" alt="logo">
+                        <div></div>
                         <div class="description">
                             <div class="name" >Sofiane Mouadeb</div>
                             <div class="stats-container">

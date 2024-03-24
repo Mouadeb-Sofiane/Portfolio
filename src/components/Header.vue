@@ -1,67 +1,71 @@
 <script setup lang="ts">
-  document.addEventListener('DOMContentLoaded', function() {
-  const menuToggle = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
+import { ref } from "vue";
+import { RouterLink } from "vue-router";
 
-  if (menuToggle && mobileMenu) {
-    menuToggle.addEventListener('click', function() {
-      mobileMenu.classList.toggle('hidden');
-    });
-  }
-  });
+const isOpen = ref(false);
+
+const toggleMobileMenu = () => {
+  isOpen.value = !isOpen.value;
+};
+
+// Ferme le menu mobile si un lien est cliqué
+const closeMobileMenu = () => {
+  isOpen.value = false;
+};
 </script>
 
 <template>
-  <header>
+    <header>
       <nav class="bg-primary p-4">
-          <div class="flex justify-between items-center">
-            <RouterLink to="/">
-                <div class="flex-shrink-0">
-                    <img src="../assets/img/SM-logo.png" class="h-12" alt="logo du site"/>
-                </div>
-            </RouterLink>
-          <div class="md:hidden">
-              <!-- Hamburger icon -->
-              <button id="menu-toggle" type="button" class="text-white hover:text-gray-300 focus:outline-none focus:text-gray-300">
-              <svg viewBox="0 0 20 20" fill="currentColor" class="menu w-6 h-6">
-                  <path fill-rule="evenodd" d="M3 9h14a1 1 0 110 2H3a1 1 0 110-2zm0-4h14a1 1 0 110 2H3a1 1 0 110-2zm0 8h14a1 1 0 110 2H3a1 1 0 110-2z" clip-rule="evenodd"></path>
-              </svg>
-              </button>
-          </div>
+        <div class="container mx-auto flex justify-between items-center">
+          <RouterLink to="/">
+            <div class="flex-shrink-0">
+              <img src="../assets/img/SM-logo.png" class="h-12" alt="logo du site"/>
+            </div>
+          </RouterLink>
+          <!-- Bouton du menu mobile -->
+          <button @click="toggleMobileMenu" class="md:hidden text-white hover:text-gray-300 focus:outline-none focus:text-gray-300">
+            <!-- Utilisation d'une condition pour afficher soit le hamburger soit la croix -->
+            <svg v-if="!isOpen" viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+              <path fill-rule="evenodd" d="M3 9h14a1 1 0 110 2H3a1 1 0 110-2zm0-4h14a1 1 0 110 2H3a1 1 0 110-2zm0 8h14a1 1 0 110 2H3a1 1 0 110-2z" clip-rule="evenodd"></path>
+            </svg>
+            <svg v-else viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+              <path fill-rule="evenodd" d="M6 6a.75.75 0 011.06 0L10 8.94l2.47-2.47a.75.75 0 111.06 1.06L11.06 10l2.47 2.47a.75.75 0 11-1.06 1.06L10 11.06l-2.47 2.47a.75.75 0 01-1.06-1.06L8.94 10 6.47 7.53A.75.75 0 016 6z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          <!-- Menu pour les grands écrans -->
           <div class="hidden md:block">
-              <div class="flex space-x-4">
-                  <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-                      <li>
-                          <RouterLink to="/" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-400 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-primary dark:hover:bg-gray-700 dark:hover:text-primary lg:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">Accueil</RouterLink>
-                      </li>
-                      <li>
-                          <RouterLink to="/projets" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-400 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-primary dark:hover:bg-gray-700 dark:hover:text-primary lg:dark:hover:bg-transparent dark:border-gray-700">Projets</RouterLink>
-                      </li>
-                      <li>
-                          <RouterLink to="/quisuisje" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-400 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-primary dark:hover:bg-gray-700 dark:hover:text-primary lg:dark:hover:bg-transparent dark:border-gray-700">Qui suis-je ?</RouterLink>
-                      </li>
-                  </ul>
-              </div>    
+            <ul class="flex space-x-4">
+              <li>
+                <RouterLink @click="closeMobileMenu" to="/" class="block py-2 pr-4 pl-3 text-gray-300 border-b border-transparent hover:text-gray-50">Accueil</RouterLink>
+              </li>
+              <li>
+                <RouterLink @click="closeMobileMenu" to="/projets" class="block py-2 pr-4 pl-3 text-gray-300 border-b border-transparent hover:text-gray-50">Projets</RouterLink>
+              </li>
+              <li>
+                <RouterLink @click="closeMobileMenu" to="/quisuisje" class="block py-2 pr-4 pl-3 text-gray-300 border-b border-transparent hover:text-gray-50">Qui suis-je ?</RouterLink>
+              </li>
+            </ul>
           </div>
         </div>
-          <!-- Mobile menu, toggle classNamees based on menu state. -->
-          <div id="mobile-menu" class="md:hidden hidden">
-          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-                  <li>
-                      <RouterLink to="/" class=" py-3 pr-4 pl-3 text-gray-200 rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white" aria-current="page">Accueil</RouterLink>
-                  </li>
-                  <li>
-                      <RouterLink to="/projet" class="py-3 pr-4 pl-3 text-gray-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-gray-200 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-200 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-200">Projets</RouterLink>
-                  </li>
-                  <li>
-                      <RouterLink to="/quisuisje" class=" py-3 pr-4 pl-3 text-gray-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-gray-200 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-200 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-200">Qui suis-je ?</RouterLink>
-                  </li>
-              </ul>
-          </div>
-          </div>
+        <!-- Menu pour les appareils mobiles -->
+        <div id="mobile-menu" :class="{ 'hidden': !isOpen }" class="md:hidden px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <ul class="flex flex-col space-y-4">
+            <li>
+              <RouterLink @click="closeMobileMenu" to="/" class="block py-3 pr-4 pl-3 text-gray-200 rounded bg-primary-700 ">Accueil</RouterLink>
+            </li>
+            <li>
+              <RouterLink @click="closeMobileMenu" to="/projets" class="block py-3 pr-4 pl-3 text-gray-200 rounded bg-primary-700 ">Projets</RouterLink>
+            </li>
+            <li>
+              <RouterLink @click="closeMobileMenu" to="/quisuisje" class="block py-3 pr-4 pl-3 text-gray-200 rounded bg-primary-700 ">Qui suis-je ?</RouterLink>
+            </li>
+          </ul>
+        </div>
       </nav>
-        <div class="bg-secondary h-0.5"></div>
-  </header>
+      <div class="bg-secondary h-0.5"></div>
+    </header>
 </template>
+  
 
+  

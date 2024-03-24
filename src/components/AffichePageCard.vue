@@ -2,6 +2,7 @@
   import { defineProps } from 'vue';
   import type { Database, Tables } from '@/supabase-types';
   import { ref } from "vue";
+  import { supabase } from "@/supabase";
   defineProps <Database["public"]["Tables"]["Card"]["Row"]>(); 
   // Import Swiper Vue.js components
   import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -126,14 +127,10 @@ const modules = [Autoplay, Pagination, Navigation];
                 </div>
             </div>
         </div>
-            
-        <div class="flex justify-center mt-32 mb-10">
-          <button class="border border-white text-white bg-primary px-4 py-2 rounded relative overflow-hidden transition-transform duration-300 hover:scale-105">
-              <a :href="lien_projet" style="font-family: 'Viga'">Accéder au site</a>
-              <div class="absolute inset-0 opacity-25 transform scale-150"></div>
-          </button>
-        </div>
-  </div>  
+
+        <a :href="lien_projet" style="font-family: 'Viga'" class="flex justify-center mt-32 m-5 mb-10 border border-white text-white bg-primary px-4 py-2 rounded relative overflow-hidden transition-transform duration-300 hover:scale-105">Accéder au site</a>
+        
+    </div>  
 </template>
 
 <style>

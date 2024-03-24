@@ -103,11 +103,19 @@
                 </div>
             </div>
         </div>
-          <h2 :class="{ 'text-secondary': isDarkMode }" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-10 xl:text-6xl"style="font-family: 'Viga'">Qui suis-je ?</h2>
+        <div class="flex justify-center">
+  <a href="#competences">
+    <div class="bounce">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 V3"></path>
+      </svg>
+    </div>
+  </a>
+</div>
 
         <div>
           <div :class="{ 'text-secondary': isDarkMode }">
-            <h2 :class="{ 'text-secondary': isDarkMode }" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-24 mb-10 xl:text-6xl"style="font-family: 'Viga'">Mes compétences</h2>
+            <h2 id="competences" :class="{ 'text-secondary': isDarkMode }" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-24 mb-10 xl:text-6xl"style="font-family: 'Viga'">Mes compétences</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10 mr-8 ml-8">
               <div class="rounded-lg p-6 shadow-md" :class="{ 'text-white': isDarkMode, 'bg-third': !isDarkMode,'text-primary': !isDarkMode, 'bg-gray-700': isDarkMode }">
                   <div class="flex items-center mb-2">
@@ -248,6 +256,23 @@
 </template>
 
 <style>
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(0px);
+    }
+  }
+
+  /* Appliquer l'animation de rebond */
+  .bounce {
+    animation: bounce 1s infinite;
+  }
+
 #btn1 {
     position: relative;
     display: flex;
