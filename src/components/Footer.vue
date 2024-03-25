@@ -18,6 +18,7 @@
         </div>
         <p class="text-gray-400 mb-4 sm:mb-0">&copy; 2024 Sofiane Mouadeb. Portfolio personnel.</p>
         <div class="flex justify-center sm:justify-end space-x-8 sm:space-x-4">
+          <RouterLink to="/login-logout" class="text-white hover:text-gray-400">Se connecter</RouterLink>
           <a href="https://mail.google.com/mail/u/1/#inbox?compose=GTvVlcSHwrvPxPSCbQHKdKsWdRxwPqhdRJXLzQNMVlCcjbHTCXDbtDgjNtlGZdxxJGbhWCqlbqlzq" class="text-white hover:text-gray-400"><IconMail/></a>
         </div>
       </div>

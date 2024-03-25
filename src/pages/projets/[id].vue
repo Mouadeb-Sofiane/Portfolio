@@ -20,7 +20,7 @@
 
 <template>
   <div class="relative">
-        <button @click="toggleDarkMode" class="fixed top-20 right-4 p-2 bg-accent border border-gray-900 rounded-full  dark:text-gray-100 z-10">
+        <button @click="toggleDarkMode" class="fixed top-24 right-4 p-2 bg-accent border border-gray-900 rounded-full  dark:text-gray-100 z-10">
             <IconSun v-if="isDarkMode" class="h-6 w-6" />
             <IconMoon v-else class="h-6 w-6" />
         </button>
