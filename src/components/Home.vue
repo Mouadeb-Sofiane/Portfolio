@@ -91,7 +91,7 @@
                       </a>
                   </div>
                   <button @click="downloadCV" style="font-family: 'Viga'" class="border mb-20 border-primary text-primary bg-gray-100 px-4 py-2 rounded relative overflow-hidden transition-transform duration-300 hover:scale-105">
-                    Télécharger mon CV
+                    Voir mon CV
                     <div class="absolute inset-0 opacity-25 transform scale-150"></div>
                   </button>
                 </div>
