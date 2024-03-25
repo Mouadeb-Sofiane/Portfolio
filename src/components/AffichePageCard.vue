@@ -40,7 +40,7 @@ const modules = [Autoplay, Pagination, Navigation];
 </script>
 
 <template>
-  <div class="p-2">
+  <div class="p-2 lg:mx-12 md:mx-6 sm:mx-4">
       <div class="text-center flex flex-col justify-center mb-16 items-center mt-12">
         <h1 class="text-4xl font-bold" style="font-family: 'Viga'">{{ nom_projet }}</h1>
         </div>  
