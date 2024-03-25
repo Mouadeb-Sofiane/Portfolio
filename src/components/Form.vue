@@ -42,12 +42,38 @@ if (route.params.id) {
                     outer: 'py-2',
                     },
                 }">
-                <FormKit name="titre_film" label="Titre du film" />
-                <FormKit name="description_film" label="Description du film" />
-                <FormKit name="note_film" type="number" label="Note /5" />
-                <FormKit name="image_film" label="Images du film" />
-                <FormKit name="date_film" type="date" label="Date du film" />
-                <FormKit name="temps_film" label="Temps du film" />
+                <FormKit name="nom_projet" label="Nom du projet" />
+                <FormKit name="image_projet" label="Image du projet" />
+                <FormKit name="description_projet" label="Description du projet" />
+                <FormKit name="logo" type="date" label="Logo du projet" />
+                <FormKit name="title1" label="titre 1" />
+                <FormKit name="title2" label="titre 2" />
+                <FormKit name="title3" label="titre 3" />
+                <FormKit name="title4" label="titre 4" />
+                <FormKit name="title5" label="titre 5" />
+                <FormKit name="title6" label="titre 6" />
+                <FormKit name="img1" label="image 1" />
+                <FormKit name="img2" label="image 2" />
+                <FormKit name="img3" label="image 3" />
+                <FormKit name="img7" label="image 4" />
+                <FormKit name="img8" label="image 5" />
+                <FormKit name="img9" label="image 6" />
+                <FormKit name="img10" label="image 7" />
+                <FormKit name="img11" label="image 8" />
+                <FormKit name="img12" label="image 9" />
+                <FormKit name="description1" label="Première description" />
+                <FormKit name="description2" label="Deuxième description" />
+                <FormKit name="description2b" label="Troisième description" />
+                <FormKit name="description3" label="Quatrième description" />
+                <FormKit name="description4" label="Cinquième description" />
+                <FormKit name="maquette" label="Lien Figma" />
+                <FormKit name="icon" label="Icon des applications utilisés" />
+                <FormKit name="icon2" label="Icon des applications utilisés" />
+                <FormKit name="icon3" label="Icon des applications utilisés" />
+                <FormKit name="icon4" label="Icon des applications utilisés" />
+                <FormKit name="icon5" label="Icon des applications utilisés" />
+                <FormKit name="icon6" label="Icon des applications utilisés" />
+                <FormKit name="lien_projet" label="Lien des projets" />
             </FormKit>
         </div>
     </div>
