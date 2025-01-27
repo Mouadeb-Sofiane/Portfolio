@@ -76,7 +76,6 @@ import IconCanva from './icon/IconCanva.vue'
 import IconTrello from './icon/IconTrello.vue'
 import IconDrive from './icon/IconDrive.vue'
 import IconIllustrator from './icon/IconIllustrator.vue'
-import IconGitHub from "@/components/icon/IconGitHub.vue";
 
 
 export default {
@@ -88,7 +87,7 @@ export default {
   data() {
     return {
       webDevLogos1: [
-        IconVuejs, IconNuxt, IconJs, IconTs, IconSupabase, IconPocketbase, IconGitHub, IconUnreal, IconHtml, IconCss, IconTailwindcss, IconScss, IconWordpress, IconPhp, 
+        IconVuejs, IconNuxt, IconJs, IconTs, IconSupabase, IconPocketbase, IconUnreal, IconHtml, IconCss, IconTailwindcss, IconScss, IconWordpress, IconPhp, 
       ],
       webDevLogos2: [
         
