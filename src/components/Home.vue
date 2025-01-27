@@ -25,7 +25,7 @@ import AfficheCard from './AfficheCard.vue'
 import Card from './Card.vue'
 import Skills from './Skills.vue'
 import { supabase } from '@/supabase'
-import { QuadraticBezier } from 'three'
+
 import QuiSuisJe from '@/components/quisuisje.vue'
 
 const isDarkMode = ref(true)

@@ -7,6 +7,8 @@ const prenom = ref('')
 const email = ref('')
 const object = ref('')
 const message = ref('')
+const isDarkMode = ref(false); // Mode clair par défaut
+
 
 const submitForm = async () => {
   const response = await fetch('https://api.web3forms.com/submit', {

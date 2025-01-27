@@ -20,6 +20,6 @@
 
 <template>
   <div class="p-2">
-    <AffichePageCard v-bind="projet" />
+    <AffichePageCard v-if="projet" v-bind="projet" />
   </div>
 </template>

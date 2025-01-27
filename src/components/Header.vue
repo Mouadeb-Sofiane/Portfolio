@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { rootSymbol } from "@formkit/vue";
 import { ref } from "vue";
 import { RouterLink } from "vue-router";
 
@@ -24,9 +25,9 @@ const handleMenuClick = (sectionId?: string) => {
   <header>
     <nav class="bg-primary p-4">
       <div class="container mx-auto flex justify-between items-center">
-        <a href="#" class="flex-shrink-0">
+        <RouterLink to="/" class="flex-shrink-0">
           <img src="../assets/img/SM-logo.png" class="h-12" alt="logo du site" />
-        </a>
+        </RouterLink>
         <!-- Bouton du menu mobile -->
         <button
           @click="toggleMobileMenu"

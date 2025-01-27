@@ -30,7 +30,7 @@
 
 
 // Fonction pour vérifier si l'URL de l'image est valide
-const isImageValid = (url) => {
+const isImageValid = (url : string) => {
   const image = new Image();
   image.src = url;
   return image.complete && image.naturalHeight !== 0;
@@ -52,7 +52,9 @@ const modules = [Autoplay, Pagination, Navigation];
 
         <!-- Images prenant 40% de l'espace sur les petits écrans et 2/5 sur les grands écrans -->
         <div class="flex flex-col w-full md:w-2/5">
-          <img class="w-full" :src="img2" alt="Image projet" />
+          <img v-if="img2" class="w-full" :src="img2" alt="Image projet" />
+
+          <!-- <img class="w-full" :src="img2" alt="Image projet" /> -->
         </div>
       </div>
       <div class="mt-20"></div>
@@ -60,7 +62,7 @@ const modules = [Autoplay, Pagination, Navigation];
       <div class="flex flex-col md:flex-row gap-11">
         <!-- Images prenant 40% de l'espace sur les petits écrans et 2/5 sur les grands écrans -->
         <div class="flex flex-col w-full md:w-2/5">
-          <img class="w-full" :src="img3" alt="Image projet" />
+          <img class="w-full" v-if="img3" :src="img3" alt="Image projet" />
         </div>
         <!-- Description prenant 60% de l'espace sur les petits écrans et 3/5 sur les grands écrans -->
         <div class="text-justify w-full md:w-3/5">
@@ -86,12 +88,12 @@ const modules = [Autoplay, Pagination, Navigation];
             @autoplayTimeLeft="onAutoplayTimeLeft"
             class="mySwiper"
           >
-            <swiper-slide><img class="w-auto h-24" :src="img7" alt="Image projet" /></swiper-slide>
-            <swiper-slide><img class="w-auto h-24" :src="img8" alt="Image projet" /></swiper-slide>
-            <swiper-slide><img class="w-auto h-24" :src="img9" alt="Image projet" /></swiper-slide>
-            <swiper-slide><img class="w-auto h-24" :src="img10" alt="Image projet" /></swiper-slide>
-            <swiper-slide><img class="w-auto h-24" :src="img11" alt="Image projet" /></swiper-slide>
-            <swiper-slide><img class="w-auto h-24" :src="img12" alt="Image projet" /></swiper-slide>
+            <swiper-slide><img class="w-auto h-24" v-if="img7" :src="img7" alt="Image projet" /></swiper-slide>
+            <swiper-slide><img class="w-auto h-24" v-if="img8" :src="img8" alt="Image projet" /></swiper-slide>
+            <swiper-slide><img class="w-auto h-24" v-if="img9" :src="img9" alt="Image projet" /></swiper-slide>
+            <swiper-slide><img class="w-auto h-24" v-if="img10" :src="img10" alt="Image projet" /></swiper-slide>
+            <swiper-slide><img class="w-auto h-24" v-if="img11" :src="img11" alt="Image projet" /></swiper-slide>
+            <swiper-slide><img class="w-auto h-24" v-if="img12" :src="img12" alt="Image projet" /></swiper-slide>
 
             <template #container-end>
               <div class="autoplay-progress">
@@ -105,7 +107,7 @@ const modules = [Autoplay, Pagination, Navigation];
             <div class="w-full md:w-2/3">
                 <h2 class="text-2xl underline mb-10" style="font-family: 'Viga'">{{ title4 }}</h2>
                 <div class="aspect-w-16 aspect-h-9 h-full w-full">
-                    <iframe class="h-full w-full" style="border: 1px solid rgba(0, 0, 0, 0.1);" :src="maquette" allowfullscreen></iframe>
+                    <iframe class="h-full w-full" style="border: 1px solid rgba(0, 0, 0, 0.1);"  v-if="maquette" :src="maquette" allowfullscreen></iframe>
                 </div>
             </div>
             <!-- Partie droite avec le texte et les images -->
@@ -116,19 +118,19 @@ const modules = [Autoplay, Pagination, Navigation];
                     <div class="mt-5">
                         <h2 class="text-2xl underline mb-5 mt-16" style="font-family: 'Viga'">{{ title6 }}</h2>
                         <div class="flex flex-wrap gap-10">
-                            <img class="w-8 h-8" :src="icon" />   
-                            <img class="w-8 h-8" :src="icon2" />   
-                            <img class="w-8 h-8" :src="icon3" />   
-                            <img class="w-8 h-8" :src="icon4" />   
-                            <img class="w-8 h-8" :src="icon5" /> 
-                            <img class="w-8 h-8" :src="icon6" />
+                            <img class="w-8 h-8" v-if="icon" :src="icon" />   
+                            <img class="w-8 h-8" v-if="icon2" :src="icon2" />   
+                            <img class="w-8 h-8" v-if="icon3" :src="icon3" />   
+                            <img class="w-8 h-8" v-if="icon4" :src="icon4" />   
+                            <img class="w-8 h-8" v-if="icon5" :src="icon5" /> 
+                            <img class="w-8 h-8" v-if="icon6" :src="icon6" />
                         </div>
                     </div>  
                 </div>
             </div>
         </div>
 
-        <a :href="lien_projet" style="font-family: 'Viga'" class="flex justify-center mt-32 m-5 mb-10 border border-white text-white bg-primary px-4 py-2 rounded relative overflow-hidden transition-transform duration-300 hover:scale-105">Accéder au site</a>
+        <a v-if="lien_projet" :href="lien_projet" style="font-family: 'Viga'" class="flex justify-center mt-32 m-5 mb-10 border border-white text-white bg-primary px-4 py-2 rounded relative overflow-hidden transition-transform duration-300 hover:scale-105">Accéder au site</a>
         
     </div>  
 </template>

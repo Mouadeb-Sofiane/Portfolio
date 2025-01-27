@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import AfficheCard from '@/components/AfficheCard.vue';
 import { supabase } from '@/supabase';
-import type { SchemaCard } from '@/types';
 
 
 console.log(supabase);

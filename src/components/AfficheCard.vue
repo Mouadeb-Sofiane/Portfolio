@@ -34,7 +34,7 @@ defineProps <Database["public"]["Tables"]["Card"]["Row"]>()
             </RouterLink>
         </div>
         <div>
-            <img :src="image_projet" class="hidden"/>
+            <img v-if="image_projet" :src="image_projet" class="hidden"/>
         </div>
         </article>
     </div>

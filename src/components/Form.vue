@@ -22,7 +22,7 @@ if (route.params.id) {
     const { data, error } = await supabase.from("Card").select("*").eq("id", route.params.id).single();
     if (error) console.error(error);
     else projet.value = data;
-}
+};
 </script>
 
 <template>
@@ -31,7 +31,7 @@ if (route.params.id) {
             <h2 class="text-2xl">
                 Résultat (Prévisualisation)
             </h2>
-            <AfficheCard v-bind="projet" />
+            <AfficheCard v-if="projet" v-bind="projet" />        
         </div>
         <div class="p-2">
             <FormKit @submit="upsertProjet" type="form" v-model="projet"
