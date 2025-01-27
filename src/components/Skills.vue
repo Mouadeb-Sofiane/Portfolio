@@ -65,7 +65,6 @@ import IconSupabase from './icon/IconSupabase.vue'
 import IconPocketbase from './icon/IconPocketbase.vue'
 import IconTailwindcss from './icon/IconTailwindcss.vue'
 import IconUnreal from './icon/IconUnreal.vue'
-import IconGitHub from './icon/IconGitHub.vue'
 import IconJs from './icon/IconJs.vue'
 import IconTs from './icon/IconTs.vue'
 import IconNuxt from './icon/IconNuxt.vue'
@@ -77,6 +76,8 @@ import IconCanva from './icon/IconCanva.vue'
 import IconTrello from './icon/IconTrello.vue'
 import IconDrive from './icon/IconDrive.vue'
 import IconIllustrator from './icon/IconIllustrator.vue'
+import IconGitHub from "@/components/icon/IconGitHub.vue";
+
 
 export default {
   components: {
