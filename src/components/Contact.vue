@@ -1,112 +1,148 @@
 <script setup lang="ts">
-  import { ref } from "vue";
-  import { useRouter } from "vue-router";
+import { ref } from 'vue'
 
-  const router = useRouter();
+const WEB3FORMS_ACCESS_KEY = '3fd9b872-bd33-468e-8042-74e1f2fb4384'
+const name = ref('')
+const prenom = ref('')
+const email = ref('')
+const object = ref('')
+const message = ref('')
 
-  const WEB3FORMS_ACCESS_KEY = "3fd9b872-bd33-468e-8042-74e1f2fb4384";
-  const name = ref("");
-  const prenom = ref("");
-  const email = ref("");
-  const object = ref("");
-  const message = ref("");
+const submitForm = async () => {
+  const response = await fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json'
+    },
+    body: JSON.stringify({
+      access_key: WEB3FORMS_ACCESS_KEY,
+      name: name.value,
+      prenom: prenom.value,
+      email: email.value,
+      object: object.value,
+      message: message.value
+    })
+  })
 
-  const submitForm = async () => {
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        access_key: "3fd9b872-bd33-468e-8042-74e1f2fb4384",
-        name: name.value,
-        prenom: prenom.value,
-        email: email.value,
-        object: object.value,
-        message: message.value,
-      }),
-    });
-
-    const result = await response.json();
-    if (result.success) {
-      console.log(result);
-      alert("Votre message a bien été envoyé !");
-      name.value = "";
-      prenom.value = "";
-      email.value = "";
-      object.value = "";
-      message.value = "";}
+  const result = await response.json()
+  if (result.success) {
+    alert('Votre message a bien été envoyé !')
+    name.value = ''
+    prenom.value = ''
+    email.value = ''
+    object.value = ''
+    message.value = ''
+  } else {
+    alert("Une erreur s'est produite, veuillez réessayer.")
   }
+}
 </script>
-  
+
 <template>
-  <div class="flex justify-center items-center h-screen  border-white">
-    <div class="bg-gray-700 p-8 border-white rounded-lg shadow-lg max-w-md w-full">
-      <h2 class="text-2xl font-bold mb-4 text-white">Formulaire de contact</h2>
-      <form @submit.prevent="submitForm">
-        <div class="flex">
-            <div class="mr-3 mt-4 mb-4">
-            <input
-                id="name"
-                type="text"
-                name="name"
-                v-model="name"
-                placeholder="Votre nom"
-                class="w-full px-3 py-2 rounded border border-gray-600 focus:outline-none focus:border-blue-500"
-            />
+  <div>
+    <section class="contact-us">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-10"></div>
+        <div
+          class="contact-wrapper p-10 rounded-2xl shadow-lg relative"
+          :class="{
+            'text-white': isDarkMode,
+            'bg-third': !isDarkMode,
+            'text-primary': !isDarkMode,
+            'bg-gray-700': isDarkMode
+          }"
+        >
+          <div class="flex flex-col lg:flex-row items-start lg:items-center">
+            <div class="w-full lg:w-2/3">
+              <form @submit.prevent="submitForm">
+                <div class="flex flex-col md:flex-row md:space-x-4">
+                  <div class="mb-4 w-full">
+                    <label class="block text-gray-700 mb-1" for="name" style="font-family: 'Viga'"
+                      >Nom</label
+                    >
+                    <input
+                      id="name"
+                      v-model="name"
+                      type="text"
+                      placeholder="Votre nom"
+                      class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400"
+                      style="font-family: 'Viga'"
+                    />
+                  </div>
+                  <div class="mb-4 w-full">
+                    <label class="block text-gray-700 mb-1" for="prenom" style="font-family: 'Viga'"
+                      >Prénom</label
+                    >
+                    <input
+                      id="prenom"
+                      v-model="prenom"
+                      type="text"
+                      placeholder="Votre prénom"
+                      class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400"
+                      style="font-family: 'Viga'"
+                    />
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <label class="block text-gray-700 mb-1" for="email" style="font-family: 'Viga'"
+                    >Email</label
+                  >
+                  <input
+                    id="email"
+                    v-model="email"
+                    type="email"
+                    placeholder="Votre email"
+                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400"
+                    style="font-family: 'Viga'"
+                  />
+                </div>
+                <div class="mb-4">
+                  <label class="block text-gray-700 mb-1" for="object" style="font-family: 'Viga'"
+                    >Objet</label
+                  >
+                  <input
+                    id="object"
+                    v-model="object"
+                    type="text"
+                    placeholder="Objet de votre message"
+                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400"
+                    style="font-family: 'Viga'"
+                  />
+                </div>
+                <div class="mb-6">
+                  <label class="block text-gray-700 mb-1" for="message" style="font-family: 'Viga'"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    v-model="message"
+                    placeholder="Votre message..."
+                    rows="4"
+                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400"
+                    style="font-family: 'Viga'"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-primary text-white py-2 px-4 rounded-lg hover:scale-105 focus:outline-none focus:ring-2"
+                  style="font-family: 'Viga'"
+                >
+                  Envoyer
+                </button>
+              </form>
             </div>
-            <div class="ml-3 mt-4 mb-4">
-            <input
-                id="prenom"
-                type="text"
-                name="prenom"
-                v-model="prenom	"
-                placeholder="Votre prenom"
-                class="w-full px-3 py-2 rounded border border-gray-600 focus:outline-none focus:border-blue-500"
-            />
+            <div class="hidden lg:block lg:w-1/3 relative">
+              <img
+                src="../assets/img/software.png"
+                alt="Contact Background"
+                class="absolute right-[-20px] top-[-100px] w-96"
+              />
             </div>
+          </div>
         </div>
-        <div class="mb-4">
-          <input
-            id="email"
-            type="email"
-            name="email"
-            v-model="email"
-            placeholder="Votre email"
-            class="w-full px-3 py-2 rounded border border-gray-600 focus:outline-none focus:border-blue-500"
-          />
-        </div>
-        <div class="mb-4">
-          <input
-            id="object"
-            type="object"
-            name="object"
-            v-model="object"
-            placeholder="Objet de votre message"
-            class="w-full px-3 py-2 rounded border border-gray-600 focus:outline-none focus:border-blue-500"
-          />
-        </div>
-        <div class="mb-6">
-          <textarea
-            id="message"
-            name="message"
-            v-model="message"
-            rows="3"
-            placeholder="Votre message..."
-            class="w-full px-3 py-2 rounded border border-gray-600 focus:outline-none focus:border-blue-500"
-          ></textarea>
-        </div>
-        <div class="flex justify-end">
-          <button
-            type="submit"
-            class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          >
-            Envoyer
-          </button>
-        </div>
-      </form>
-    </div>
+      </div>
+      <div class="h-10"></div>
+    </section>
   </div>
 </template>
-

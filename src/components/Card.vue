@@ -10,19 +10,6 @@ import { ref } from 'vue'
         <div></div>
         <div class="description">
           <div class="name">Sofiane Mouadeb</div>
-          <div class="stats-container">
-            <div class="figure">
-              <div>87 VELO</div>
-              <div>82 BOXE</div>
-              <div>82 BOXE</div>
-              <div>99 FOOTBALL</div>
-            </div>
-            <div class="figure">
-              <div>70 DESSIN</div>
-              <div>89 MANGA</div>
-              <div>95 INFORMATIQUE</div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -35,7 +22,7 @@ import { ref } from 'vue'
   border: 4px #f1f1f1 solid;
   max-width: 290px;
   width: 90%;
-  background: url(../assets/img/sof11.png), #f1f1f1;
+  background: url(../assets/img/sofiane.png), #f1f1f1;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
